@@ -83,7 +83,7 @@ body a{
 }
 .sectionB{
     grid-area: ibuo;
-    background: red;
+    /* background: red; */
 }
 .sectionC{
     grid-area: ito;
@@ -92,11 +92,36 @@ body a{
 }
 .sectionD{
     grid-area: ino;
-    background: black;
+    /* background: black; */
 }
+
+#enq, #cont{
+    position: absolute;
+    width: 7rem;
+    height: 2rem;
+    /* background-color: #4e443e; */
+    right: 10rem;
+    font-family: Nunito;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+    cursor: pointer;
+    color: #4e443e;
+    font-weight: bold;
+}
+#cont{
+    /* background-color: green; */
+    right: 1rem;
+}
+@media only screen and (max-width: 959.98px){
+    #cont, #enq{
+        display: none;
+    }
+}
+
+
 .sectionE{
     grid-area: ise;
-    background: greenyellow;
+    /* background: greenyellow; */
 }
 .sideMenu{
     display: none;
@@ -165,12 +190,14 @@ float: left; clear: both;
     background-color: yellowgreen;
     box-shadow: 4px 2px 3px yellowgreen;
 }
-#missionStatement{
+#missionStatement, .temp{
     position: relative;
     top: 90vh;
     width: 80vw;
     height: 12rem;
     margin: auto;
+}
+.temp{
     background: #3c67b2;
 }
 
@@ -563,4 +590,42 @@ float: left; clear: both;
 
 .support{
     right: 0;
+}
+@media only screen and (min-width: 600px){
+    #hamburger{
+        display: none;
+    }
+}
+#missionStatement:first-of-type{
+    background: none;
+}
+#mission{
+    font-family: "Nunito italic";
+    font-size: 4rem;
+    text-indent: 3rem;
+    margin-left: 2rem;
+}
+#hm{
+    font-family: Nunito bold;
+    font-size: 2rem;
+}
+.sidemenu{
+    width: 10rem;
+    height: 100vh;
+    background-color: #726259;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+@media only screen and (max-width: 599.98px){
+    body{
+        overflow-x: hidden;
+    }
+}
+.vis{
+    transform: translateX(10rem);
+}
+.vie{
+opacity: 1;
 }
