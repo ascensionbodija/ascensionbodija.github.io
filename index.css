@@ -1,0 +1,694 @@
+/*the site as a whole has been written using vanilla JavaScript (ES6) and CSS3 with a strong emphasis on 
+quick, easy, long-term website maintenance in mind*/
+/*when adding new features please refrain from using frameworks like bootstrap*/
+/*or the reactJS library, unless absolutely neccesary.*/
+/*the code is straightforward enough if you know what you are doing*/
+
+*{
+    margin: 0;
+    padding: 0;
+    --link_nav: #3c463b;
+    --link_navHighlight: #ca983d;
+    user-select: none;
+}
+body a{
+    text-decoration: none;
+}
+.link{
+    cursor: pointer;
+}
+
+/*fonts embedded*/
+@font-face {
+    font-family: 'Nunito Italic';
+    src: url('/fonts/Nunito-italic.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-regular.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Nunito bold';
+    src: url('/fonts/Nunito-bold.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Olde English Regular';
+    src: url('/fonts/OldeEnglish.woff') format('woff');
+    }
+
+
+    /*title with top-corner church image inset*/
+#headerCaption{
+    font-family: Olde English Regular;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #4e443e;
+    margin-top: 1.5rem;
+    line-height: 0.7;
+}
+#headerCaption a {
+    color: #4e443e;
+}
+#headerCaption a:hover{
+    color:rgb(202, 152, 61);
+}
+#headerCaption span{
+    font-family: Nunito;
+    font-size: 0.9rem;
+    cursor: auto;    
+}/*recall that this span is to enable toggling of address visibility if site is switched to mobile view
+
+/*the church courtyard backdrop*/
+#landing{
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./img/west.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contrast{
+    position: absolute;
+    background: #000000;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.7;
+}
+
+.main{
+    position: absolute;
+    /*dimension and position values defined in respective media queries*/
+    color: white;
+    font-size: 4.5rem;
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    
+}
+.main p{
+    font-family: Nunito;
+}
+
+#missionStatement, .temp{
+    position: relative;
+    /*dimensions defined in respective media queries*/
+    margin: auto;
+}
+
+.menu{
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    height: 2.17rem;
+    background-color: #726259;
+    opacity: 1;
+    z-index: 3;
+}
+
+#imgBlk{
+    position: relative;
+    /*dimension properties defined in respective media queries*/
+    border-bottom-left-radius: 15%;
+    background-color: #dfdad609;
+    background-image: url('/img/skee346.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#imgTop{
+float: left; clear: both;
+    width: 7rem;
+    height: 140%;
+    margin: 0.5rem 0.6rem 0rem 2.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+/*the banner and asscociated links concerns*/
+#banner{
+    position: relative;
+    width: 100vw;
+    height: 5.21rem;
+    background-color: #dfdad6bb;
+    opacity: 0.9;
+    z-index: 5;
+    display: grid;
+    grid-template-rows: 25% 20% 17.5% 37.5%;
+    grid-template-columns: 3.5fr 2fr 1.5fr 3fr;
+    grid-template-areas:
+    "ofu . . ."
+    "ofu ibuo ito ino"
+    "ofu ibuo ito ino"
+    "ofu ibuo ise ."
+}
+.sectionA{
+    font-family: 'Olde English Regular';
+    grid-area: ofu;
+}
+.sectionB{
+    grid-area: ibuo;
+}
+
+.sectionC{
+    grid-area: ito;
+    text-align: right;
+}/*recall that this section has the social media links*/
+/*social links concerns*/
+.social{
+    margin-left: 0.2rem;
+}
+#fb:hover{
+    background-color: #3c67b2;
+    box-shadow: 4px 2px 3px#3c67b2;
+}
+#ig:hover{
+    background-color: goldenrod;
+    box-shadow: 4px 2px 3px goldenrod;
+}
+#ws:hover{
+    background-color: yellowgreen;
+    box-shadow: 4px 2px 3px yellowgreen;
+}
+/*end of social links concerns for desktop and tablets*/
+
+
+.sectionD{
+    grid-area: ino;
+}/*recall that this section has the
+/*optional mass and contact buttons only visible on desktop site*/
+#massEnq, #contEnq{
+    position: absolute;
+    width: 7rem;
+    height: 2rem;
+    right: 10rem;
+    font-family: Nunito;
+    box-sizing: border-box;
+    padding-top: 0.5rem;
+    cursor: pointer;
+    color: #4e443e;
+    font-weight: bold;
+}
+#contEnq{
+    right: 1rem;
+}
+@media only screen and (max-width: 959.98px){
+    #contEnq, #massEnq{
+        display: none;
+    }
+}
+/*end of optional buttons concerns*/
+
+.sectionE{
+    grid-area: ise;
+}/*this section is to contain the colour scheme-changing buttons for day and night browsing*/
+
+
+.sidemenu{
+    display: none;
+}/*this is to dispay only on mobile*/
+
+
+
+.temp{
+    background: #3c67b2;
+}
+
+/*mobile menu concerns*/
+#hamburger{
+    display: none;
+    display: block;
+    position: absolute;
+    scale: 0.6;
+    top: 0;
+    cursor: pointer;
+}
+.srg{
+    width: 2.19rem;
+    height: 0.31rem;
+    background-color: #dfdad6bb;
+    margin: 0.375rem 0;
+    transition: 0.4s;
+}
+.flip .ia{
+    transform: translate(0,0.69rem) rotate(-45deg);
+}
+.flip .ib{
+    opacity: 0;
+}
+.flip .ic{
+    transform: translate(0, -0.69rem) rotate(45deg);
+}
+
+/*all devices not mobile*/
+@media only screen and (min-width: 960px){
+    #landing{
+        background-size: cover;
+        background-position-x: center;
+    }
+}
+
+/*low to mid res desktop*/
+@media only screen and (min-width: 960px) and (max-width: 1335.98px){
+    #banner{
+    grid-template-columns: 5.5fr 0fr 1.5fr 3fr;
+    grid-template-areas:
+    "ofu . . ."
+    "ofu ibuo ito ino"
+    "ofu ibuo ito ino"
+    "ofu ibuo ise ."
+}
+}
+
+/*overlap of low res device*/
+@media only screen and (min-width: 960px) and (max-width: 1024.98px){
+    
+    #imgBlk{
+        width: 16rem;
+        height: 18rem;
+        top: -16rem; /*varies, dependent upon the '.main' div's position top*/
+        left: -20rem;
+    }
+    .main{
+        top: 13rem;     
+        width: 60%;
+        left: 23rem;
+        font-size: 4rem;
+    }
+    #missionStatement, .temp{
+        top: 42rem;
+        width: 84vw;
+        height: 12rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/*overlap of mid res desktop*/
+@media only screen and (min-width: 1025px){
+    #imgBlk{
+        width: 16rem;
+        height: 18rem;
+        top: -13rem;
+        left: -20rem;
+    }
+    .main{
+        top: 14rem;
+        width: 60%;
+        left: 23rem;
+        font-size: 4rem;
+    }
+    #missionStatement, .temp{
+        top: 42rem;
+        width: 84vw;
+        height: 12rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* high res desktop*/
+@media only screen and (min-width: 1336px){
+    #imgBlk{
+        width: 19.5rem;
+        height: 21.9rem;
+        top: -14.2rem;
+    }
+    .main{
+        top: 13.5rem;
+        width: 65%;
+        left: 35%;
+        height: 10rem;
+        font-size: 4.2rem;
+    }
+}
+/*remember to keep query cascade in this order*/
+/*website not optimised for 4K resolution.. might get around to that later if time permits.
+
+
+
+/*inchoate stage*/
+#missionStatement:first-of-type{
+    background: none;
+}
+#mission{
+    font-family: "Nunito italic";
+    font-size: 4rem;
+    text-indent: 3rem;
+    margin-left: 2rem;
+}
+#hm{
+    font-family: Nunito bold;
+    font-size: 2rem;
+}
+.sidemenu{
+    width: 10rem;
+    height: 100vh;
+    background-color: #726259;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: 2s;
+}
+.vis{
+    transform: translateX(10rem);
+}
+.vie{
+opacity: 1;
+}
+
+/*end inchoate stage*/
+
+
+
+
+
+/*tablets*/
+@media only screen and (min-width: 600px) and (max-width: 959.98px){
+    #landing{
+        background-size: cover;
+        height: 27rem;
+    }
+    #contrast{
+        height: 27rem;
+        opacity: 0.5;
+    }
+    #imgTop{
+        margin-left: 0.2rem;
+    }
+    #banner{
+        position: relative;
+        height: 4.5rem;
+        grid-template-columns: 4fr 0fr 1fr 0fr;
+        grid-template-areas:
+        "ofu . . ."
+        "ofu ibuo ito ino"
+        "ofu ibuo ito ino"
+        "ofu ibuo ise ino"
+    }
+    #headerCaption{
+        margin-top: 0.8rem;
+    }
+    .sectionC{
+        margin-right: 0.3rem;
+        margin-top: -0.4rem;
+    }/* recall that this contians the social media links*/
+
+
+    #imgBlk{
+        position: absolute;
+        top: 0.5rem;
+        width: 10.5rem;
+        height: 12rem;
+        left: -11rem;
+        border-bottom-left-radius: 0;
+        background-color: #dfdad600;
+    }
+    .main{
+        position: absolute;
+        font-size: 2.5rem;
+        top: 6.5rem;
+        width: 16rem;
+        height: 11rem;
+        left: 17rem;
+        color: goldenrod;
+    }
+    .main p{
+        margin-top: 1.5rem;
+        font-family: Nunito;
+    }
+    #missionStatement, .temp{
+        top: 22rem;
+        width: 84vw;
+        height: 5rem;
+        margin-bottom: 5rem;
+    }
+    #mission{
+        color: green;
+        font-size: 2.3rem;
+    }
+    .extras{
+        right: 0;
+    }
+    .dropBtn{
+        font-size: 0.7rem;
+        padding-right: 0.3rem;
+        box-sizing: content-box;
+    }
+}
+
+@media only screen and (min-width:665px) and (max-width:859.98px){
+    #headerCaption{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width:860px) and (max-width:959.98px){
+    #headerCaption{
+        font-size: 2.5rem;
+    }
+}
+
+/*mid resolution mobiles*/
+@media only screen and (max-width: 599.98px){
+    #landing{
+        background-size:160%;
+        height: 20rem;
+        background-position-x: center;
+        background-position-y: 2.5rem;
+    }
+    #contrast{
+        height: 20rem;
+    }
+    .menu{
+        top: 4.5rem;
+    }
+    #banner{
+        position: fixed;
+        height: 4.5rem;
+        grid-template-columns: 5fr 0fr 2fr 0fr;
+        grid-template-areas:
+        "ofu . . ."
+        "ofu ibuo ito ino"
+        "ofu ibuo ito ino"
+        "ofu ibuo ise ino"
+    }
+    #headerCaption{
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-top: 0.8rem;
+    }
+    #headerCaption span{
+        position: absolute;
+        visibility: hidden;
+        top:0; font-size: 0.7rem; left: 0;
+    }
+    #headerCaption span::after{
+        font-size: 0.95rem;
+        font-weight: bold;
+        position: absolute;
+        visibility: visible;
+        top: 3.25rem; left: 3.6rem;
+        content:'Bodija, Ibadan.'
+    }
+    #headerCaption:hover span::after{
+        color: #4e443e;
+    }
+
+    #imgTop{
+        width: 3rem; height: 3.6rem;
+        margin-left: 0.2rem;
+        margin-right: 0.3rem;
+    }
+    #imgBlk{
+        position: absolute;
+        top: -0.5rem;
+        width: 10.5rem;
+        height: 12rem;
+        left: -11rem;
+        border-bottom-left-radius: 0;
+        background-color: #dfdad600;
+    }
+
+    .main{
+        position: absolute;
+        font-size: 1.7rem;
+        top: 7.5rem;
+        width: 10rem;
+        height: 11rem;
+        left: 12rem;
+        color: white;
+    }
+    .main p{
+        margin-top: 1.5rem;
+        font-family: Nunito;
+    }
+    .social{
+        margin-left: 0rem;
+        margin-right: 0.2rem;
+        width: 1.7rem;
+        box-shadow: 4px 2px 3px#f59300;
+        background-color: #f59300;
+    }
+    #fb{
+        box-shadow: 4px 2px 3px#3c67b2;
+        background-color: #3c67b2;
+    }
+    #ws{
+        box-shadow: 4px 2px 3px yellowgreen;
+        background-color: yellowgreen;
+    }
+    .sectionC{
+        position: absolute;
+        top: 3.5rem; right: 1.4rem; width: 8rem;
+    }
+    #missionStatement, .temp{
+        top: 18rem;
+        width: 84vw;
+        height: 5rem;
+        margin-bottom: 7rem;
+    }
+    #mission{
+        color: green;
+        font-size: 2rem;
+    }
+    .sidemenu{
+        display: block;
+    }
+    .dropBtn, .spacer p{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+    }
+}
+
+/*low res mobiles*/
+@media only screen and (max-width: 351px){
+    #landing, #contrast, #banner, .menu{
+        width: 105vw;
+    }
+    #missionStatement{
+        margin-left: 5vw;
+        top: 20rem;
+        width: 90vw;
+    }
+}
+
+
+/*the menu concerns*/
+@media only screen and (min-width: 600px){
+    .menu{
+        display: grid;
+        grid-template-columns: 0.6fr 0.4fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "spacer menu1 menu2 menu3 menu4 menu5 menu6";
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 750px){
+    .dropmenu1{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 620px) and (max-width: 1275px){
+    .menu{
+        display: grid;
+        grid-template-columns: 0.8fr 0.2fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "spacer menu1 menu2 menu3 menu4 menu5 menu6";
+    }
+}
+
+.spacer{
+    grid-area: spacer;
+    text-align: center;
+}
+.spacer a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Nunito;
+}
+.spacer p{
+    padding-top: 0.4rem;
+}
+
+.dropmenu1{
+    grid-area: menu1;
+}
+.dropmenu2{
+    grid-area: menu2;
+}
+.dropmenu3{
+    grid-area: menu3;
+}
+.dropmenu4{
+    grid-area: menu4;
+}
+.dropmenu5{
+    grid-area: menu5;
+}
+.dropmenu6{
+    grid-area: menu6;
+    background: #3c67b2;
+}
+.drop{
+    position: relative;
+    top: 0rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropBtn, .drop p{
+    color: white;
+    text-align: center;
+    padding-top: 0.6rem;
+    font-family: "Nunito bold";
+}
+.dropBtn{
+    height: 1.5rem;
+}
+.dropLinks{
+    position: absolute;
+
+    display: none;
+
+    background-color: #dfdad6;
+    min-width: 18rem;
+    box-shadow: 0px 8px 16px 8px #000000cc;
+}
+.dropLinks a{
+    padding: 0.8rem 2rem;
+    border: solid 1px #3c463b17;
+    color: #4e443e;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: "Nunito italic";
+    text-decoration: none;
+    display: block;
+}
+
+.dropLinks a:hover{
+    background-color: #726259;
+    color: #fff;
+    font-weight: normal;
+}
+
+.drop:hover .dropLinks{
+    display: block;
+}
+.drop:hover{
+    background: #ca983d;
+}
+
+.support{
+    right: 0;
+}
+@media only screen and (min-width: 600px){
+    #hamburger{
+        display: none;
+    }
+}
+
+
+
+
