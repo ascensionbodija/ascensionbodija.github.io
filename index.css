@@ -302,8 +302,7 @@ float: left; clear: both;
     display: table-caption;
     /* text-align: left; */
     font-size: 3rem;
-    font-family: "Nunito bold";
-    font-family: "Olde English";
+    font-family: "Olde English Regular";
     height: 6rem;
 }
 #boardTitle p, #boardTitle_2 p{
