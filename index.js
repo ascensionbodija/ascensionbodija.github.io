@@ -13,7 +13,7 @@ let sidemenu = document.querySelector('.sideBar');
 ham.addEventListener('click',menuBar);
 
 let land = document.querySelector('#landing');
-let w = window.innerwidth;
+let w = window.innerWidth;
 if(w>900){
 land.classList.add('backSwitch');
 }
