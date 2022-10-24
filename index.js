@@ -13,6 +13,9 @@ let sidemenu = document.querySelector('.sideBar');
 ham.addEventListener('click',menuBar);
 
 let land = document.querySelector('#landing');
+let W = window.innerwidth;
+if(w>900){
 land.classList.add('backSwitch');
+}
 
 alert('Site under construction! Status quo for preview purposes only!');
