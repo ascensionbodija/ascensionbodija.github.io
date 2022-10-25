@@ -293,7 +293,8 @@ to be included at a later time*/
 /*this is the structuring for the table for mass times and confession schedules*/
 #scheduleBoard, #scheduleBoard_2{
     position: relative;
-    width: 90%;
+    margin: auto;
+    width: 94%;
     display: table;
 }
 #scheduleBoard_2{
