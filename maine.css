@@ -299,6 +299,7 @@ to be included at a later time*/
 }
 #scheduleBoard_2{
     position: absolute;
+    width: 100%;
 }
 
 #boardTitle, #boardTitle_2{
