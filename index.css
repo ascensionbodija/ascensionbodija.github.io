@@ -507,6 +507,9 @@ float: left; clear: both;
     85%{
         background-image: url('./img/altview.jpg');
     }
+100%{
+background-image: url('./img/east.jpg');
+}
 
 }
 
@@ -614,6 +617,10 @@ float: left; clear: both;
     #hamburger, .sideBar{
         display: block;
     }
+
+.boardHeaderContent:nth-child(1),.boardHeaderContent:nth-child(2), #boardFooter{
+    display: none;
+}
 
 
     #scheduleBoard{
