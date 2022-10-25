@@ -97,6 +97,7 @@ body a{
     position: absolute;
     background: var(--contrast_accent);
     height: 100vh;
+height: var(--landingHeight);
     width: 100vw;
     /* opacity: 0.7; */
 }
@@ -630,7 +631,7 @@ display: none;
         transform: scaleX(0.75) scaleY(0.6);
         position: absolute;
         left: -4rem;
-        top: -9.1rem;
+        top: -8rem;
     }
     #landing{
         top: 0;
