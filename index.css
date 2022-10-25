@@ -623,13 +623,13 @@ background-image: url('./img/east.jpg');
     display: none;
 }
 
-missionBar:nth-child(2){
+#hr2{
 display: none;
 }
     #scheduleBoard{
         transform: scaleX(0.75) scaleY(0.6);
         position: absolute;
-        left: -4.5rem;
+        left: -4rem;
         top: -9.1rem;
     }
     #landing{
