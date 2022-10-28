@@ -32,4 +32,4 @@ for(i=0;i<listButton.length;i++){
         }
     });
 }
-// alert('Site under construction! Status quo for preview purposes only!');
+alert('Site under construction! Status quo for preview purposes only!');
