@@ -19,4 +19,4 @@ let sideBar = document.querySelector(".sideBar");
 let sideBarTop = sideBar.getBoundingClientRect().top;
 
 
-// alert('Site under construction! Status quo for preview purposes only!');
+alert('Site under construction! Status quo for preview purposes only!');
