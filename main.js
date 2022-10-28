@@ -14,4 +14,9 @@ ham.addEventListener('click',menuBar);
 
 let land = document.querySelector('#landing');
 
-alert('Site under construction! Status quo for preview purposes only!');
+var displayHeight = window.innerHeight;
+let sideBar = document.querySelector(".sideBar");
+let sideBarTop = sideBar.getBoundingClientRect().top;
+
+
+// alert('Site under construction! Status quo for preview purposes only!');

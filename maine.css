@@ -309,12 +309,14 @@ to be included at a later time*/
     font-family: "Olde English Regular";
     height: 6rem;
 }
-#boardTitle p, #boardTitle_2 p{
-    margin-top: 1.5rem;
+#boardTitle_2{
+    height: 4.6rem;
 }
 #boardTitle p{
+    margin-top: 2rem;
     text-align: center;
 }
+
 #boardTitle_2 p{
     text-align: center;
 }
@@ -593,8 +595,11 @@ to be included at a later time*/
         --bannerHeight: 4.5rem;
         --landingHeight: 24rem;
         --position: calc(var(--landingHeight) - 6rem);
+        --banner_accent:#dfdad6;
     }
-
+#banner{
+    opacity: 1;
+}
     .dropBtn, .spacer p{
         display: none;
     }
@@ -842,28 +847,103 @@ to be included at a later time*/
 .sideBar{
     position: fixed;
     top: 0;
-    left: -10rem;
-    width: 10rem;
-    background-color: var(--menu_accent);
+    left: -14rem;
+    width: 14rem;
+    height: 25rem;
+    background-color: var(--fb);
     cursor: pointer;
-    opacity: 1;
-    transition: 1s;
+    transition: 0.7s;
 }
 #sideBarBuffer{
     position: relative;
     top: 0;
-    height: 20vh;
+    height: 15vh;
     width: 10rem;
-
+    background: #0099ff;
+    border-bottom-right-radius: 1rem;
+    color: white;
+}
+#sideBarBuffer p{
+    position: absolute;
+    top: 3.5rem; right: 1rem;
+    font-size: 1.3rem;
+    font-family: Nunito;
 }
 #sideBarContent{
-    position: sticky;
-    top: 0;
-    width: 10rem;
-    height: 80vh;
+    position: fixed;
+    top: 7.68rem;
+    width: 14rem;
+    height: 84vh;
+    background: var(--fb);
+    box-sizing: border-box;
+    font-family: Nunito;
+}
+.barMenu{
+    position: relative;
+    width: 100%;
+    background: var(--link_nav);
+}
+#sideBarContent .barMenu p{
+    height: 3rem;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+    padding-top: 0.7rem;
+    padding-left: 0.5rem;
+    border: 3px solid var(--fb);
+}
+#sideBarContent .barMenu li{
+    list-style: none;
+    font-size: 1.4rem;
+    background: var(--menu_accent);
+    box-sizing: border-box;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    height: 3rem;
+    border-top: 1px solid var(--banner_accent);
+}
+.barMenu button{
+    width: 2rem;
+    height: 1.6rem;
+    position: absolute; 
+    top: 0.6rem;
+    right: 1rem;
 }
 
-
+.bm1{
+    background: blue;
+}
+.bm2{
+    background: red;
+    top:-15rem;
+}
+.bm3{
+    background: yellow;
+    top:-30rem;
+}
+.bm4{
+    background: purple;
+    top:-45rem;
+}
+.bm5{
+    background: orange;
+    top:-60rem;
+}
+.bm6{
+    width: 100%;
+    height: 15rem;
+    background: green;
+    background: var(--fb);
+    top:-75rem;
+}
+/*inchoate stage*/
+.vis{
+    transform: translateX(14rem);
+}
+.reveal{
+    transition: 1s;
+    transform: translateY(14.8rem);
+}
+/*end inchoate stage*/
 
 
 /*the web version menu concerns*/
@@ -979,11 +1059,6 @@ to be included at a later time*/
 }
 /*end of web version dropmenu concerns*/
 
-/*inchoate stage*/
-.vis{
-    transform: translateX(10rem);
-}
-/*end inchoate stage*/
 
 @media only screen and (max-width: 420px){
     #scheduleBoard{
