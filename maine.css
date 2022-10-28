@@ -280,7 +280,7 @@ to be included at a later time*/
 }
 #massTimes{
     width: 84vw;
-    height: 40rem;
+    height: 42rem;
     margin-bottom: 3rem;
     padding: rem;
     box-sizing: border-box;
@@ -318,6 +318,7 @@ to be included at a later time*/
 }
 
 #boardTitle_2 p{
+    margin-top: 1rem;
     text-align: center;
 }
 
@@ -382,6 +383,11 @@ to be included at a later time*/
     padding: 0.5rem;
     border-bottom: 5px solid var(--link_nav);
 }
+
+    .adoration{
+        font-weight: bold;
+    }
+
 /*end of mass times and confessions schedule*/
 
 .temp{
@@ -826,7 +832,7 @@ to be included at a later time*/
     }
     #massTimes{
         width: 84vw;
-        height: 25rem;
+        height: 27rem;
         margin-bottom: 3rem;
         padding: rem;
         box-sizing: border-box;
@@ -878,7 +884,7 @@ to be included at a later time*/
     box-sizing: border-box;
     font-family: Nunito;
 }
-.barMenu{
+/* .barMenu{
     position: relative;
     width: 100%;
     background: var(--link_nav);
@@ -934,7 +940,47 @@ to be included at a later time*/
     background: green;
     background: var(--fb);
     top:-75rem;
+} */
+
+#sideBarContent a, .listButton{
+    padding: 6px 8px 6px 16px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+} 
+
+#sideBarContent a:hover, .listButton:active{
+    color: blue;
 }
+.major{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    padding: 0px 10px;
+}
+
+.engaged{
+    background-color: orange;
+    color: whitesmoke;
+}
+.listbox{
+    display: none;
+    background-color: purple;
+    padding-left: 6px;
+}
+.fa-caret-down{
+    float: right;
+    padding-right: 8px;
+}
+
+
+
 /*inchoate stage*/
 .vis{
     transform: translateX(14rem);
@@ -1025,6 +1071,13 @@ to be included at a later time*/
     min-width: 18rem;
     box-shadow: 0px 8px 16px 8px #000000cc;
 }
+    .dropLinksExtra{
+        position: absolute; left: 5rem; top:-1rem;
+        display: none;
+        background-color: var(--menu_collapsedLinksCard);
+        min-width: 18rem;
+        box-shadow: 0px 8px 16px 8px #000000cc;
+}
 .dropLinks a{
     padding: 0.8rem 2rem;
     border: solid 1px var(--menu_collapsedLinksBorders);
@@ -1035,16 +1088,47 @@ to be included at a later time*/
     text-decoration: none;
     display: block;
 }
+    .dropLinksExtra a{
+        padding: 0.8rem 2rem;
+        border: solid 1px var(--menu_collapsedLinksBorders);
+        color: var(--link_nav);
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: "Nunito italic";
+        text-decoration: none;
+        display: block;
+}
 
 .dropLinks a:hover{
     background-color: var(--menu_accent);
     color: var(--menu_collapsedLinks);
     font-weight: normal;
 }
-
+    .dropLinksExtra a:hover{
+        background-color: var(--menu_accent);
+        color: var(--menu_collapsedLinks);
+        font-weight: normal;
+    }
+    
 .drop:hover .dropLinks{
     display: block;
 }
+    .overview:hover .dropLinksExtra{
+        display: block;
+    }
+    .parishFinance:hover .dropLinksExtra{
+        display: block;
+    }
+    .parishOffice:hover .dropLinksExtra{
+        display: block;
+    }
+    .funerals:hover .dropLinksExtra{
+        display: block;
+    }
+    .adultFaith:hover .dropLinksExtra{
+        display: block;
+    }
+
 .drop:hover{
     background: var(--link_navHighlight);
 }

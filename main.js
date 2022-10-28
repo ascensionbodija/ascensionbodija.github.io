@@ -18,5 +18,18 @@ var displayHeight = window.innerHeight;
 let sideBar = document.querySelector(".sideBar");
 let sideBarTop = sideBar.getBoundingClientRect().top;
 
-
-alert('Site under construction! Status quo for preview purposes only!');
+let listButton = document.getElementsByClassName("listButton");
+let i;
+for(i=0;i<listButton.length;i++){
+    listButton[i].addEventListener('click',function(){
+        this.classList.toggle("active");
+        let listBoxContent = this.nextElementSibling;
+        if (listBoxContent.style.display === 'block'){
+            listBoxContent.style.display='none';
+        }
+        else{
+            listBoxContent.style.display='block';
+        }
+    });
+}
+// alert('Site under construction! Status quo for preview purposes only!');
