@@ -26,6 +26,9 @@ quick, easy, long-term website maintenance in mind*/
     --menu_collapsedLinksBorders: #3c463b17;
     --menu_collapsedLinksCard: #dfdad6;
     --position: calc(var(--landingHeight) - (var(--bannerHeight)));
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
 }
 body a{
@@ -711,6 +714,7 @@ to be included at a later time*/
         background-color: var(--menu_accent);
         opacity: 1;
         z-index: 3;
+        border-bottom: 2px outset var(--ig);
     }
     /* 
     .menu{
@@ -856,23 +860,28 @@ to be included at a later time*/
     left: -14rem;
     width: 14rem;
     height: 25rem;
-    background-color: var(--fb);
+    background: var(--menu_accent);
     cursor: pointer;
     transition: 0.7s;
 }
 #sideBarBuffer{
     position: relative;
     top: 0;
-    height: 15vh;
-    width: 10rem;
-    background: #0099ff;
+    height: 7.5rem;
+    width: 90%;
+    /* background: #0099ff; */
+    background: var(--menu_accent);
     border-bottom-right-radius: 1rem;
-    color: white;
+    color: var(--menu_accent);
+    color: whitesmoke;
+    /* font-weight: bold;  */
+    font-style: italic;
+    z-index: 5;
 }
 #sideBarBuffer p{
     position: absolute;
-    top: 3.5rem; right: 1rem;
-    font-size: 1.3rem;
+    top: 4rem; right: 1rem;
+    font-size: 1rem;
     font-family: Nunito;
 }
 #sideBarContent{
@@ -880,69 +889,48 @@ to be included at a later time*/
     top: 7.68rem;
     width: 14rem;
     height: 84vh;
-    background: var(--fb);
     box-sizing: border-box;
+    background-color: var(--link_nav);
     font-family: Nunito;
 }
-/* .barMenu{
-    position: relative;
-    width: 100%;
+.sideBar, #sideBarBuffer, #sideBarContent{
+    outline: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+.menuCaption{
+    display: inline-block;
+    width: 80%;
+    font-size: 1rem;
     background: var(--link_nav);
+    padding: 0.6rem;
+    color: whitesmoke;
 }
-#sideBarContent .barMenu p{
-    height: 3rem;
+
+.plus{
+    color: var(--ig);
+    position: absolute;
     font-size: 1.3rem;
-    box-sizing: border-box;
-    padding-top: 0.7rem;
-    padding-left: 0.5rem;
-    border: 3px solid var(--fb);
+    width: 15%;
+    padding: 0.3rem;
+    left: 85%;
+    background-color: transparent;
+    background-color: var(--link_nav);
 }
-#sideBarContent .barMenu li{
+
+#sideBarContent .menuTitle a{
     list-style: none;
-    font-size: 1.4rem;
+    font-size: 1rem;
     background: var(--menu_accent);
     box-sizing: border-box;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    height: 3rem;
+    padding-top: 0.7rem;
+    padding-left: 1.5rem;
+    height: 2.5rem;
     border-top: 1px solid var(--banner_accent);
 }
-.barMenu button{
-    width: 2rem;
-    height: 1.6rem;
-    position: absolute; 
-    top: 0.6rem;
-    right: 1rem;
-}
 
-.bm1{
-    background: blue;
-}
-.bm2{
-    background: red;
-    top:-15rem;
-}
-.bm3{
-    background: yellow;
-    top:-30rem;
-}
-.bm4{
-    background: purple;
-    top:-45rem;
-}
-.bm5{
-    background: orange;
-    top:-60rem;
-}
-.bm6{
-    width: 100%;
-    height: 15rem;
-    background: green;
-    background: var(--fb);
-    top:-75rem;
-} */
-
-#sideBarContent a, .listButton{
+#sideBarContent a{
     padding: 6px 8px 6px 16px;
     color: white;
     font-size: 1.2rem;
@@ -956,10 +944,49 @@ to be included at a later time*/
     text-align: left;
 } 
 
-#sideBarContent a:hover, .listButton:active{
-    color: blue;
+#sideBarContent a:hover{
+    color: var(--ig);
 }
-.major{
+
+#sideBarContent a:first-of-type{
+    border-top: 0px;
+}
+.menuTitle{
+    position: relative;
+    top: -8rem;
+    display: none;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -2;
+}
+
+/*there is an inexplicable clicking of the first link of every collapsible menu that occurs automatically when the caption beside the plus sign is clicked.
+The captionflap was made to address this*/
+
+.menuCaptionFlap{
+    position: absolute;
+    width: 85%;
+    height: 3rem; /*ensure a slight overlap*/
+    background-color: transparent;
+    box-sizing: border-box;
+    z-index: 9;   
+}
+/*Note to self: remember that the order of placement of the flap before the maincaption 
+in the html, and the seemingly un-intuitive increased z-index in the stylesheet
+is to take the nextSibling property of the object used in the js into account.
+This flap was created after the fact. I can't be bothered to edit too many chunks of code;
+*/
+
+.slidey{
+    top: 0;
+    opacity: 1;
+}
+.active{
+    background: var(--banner_accent);
+    color: var(--ig);
+}
+
+/* .major{
     margin-left: 1rem;
     font-size: 1.5rem;
     padding: 0px 10px;
@@ -968,16 +995,8 @@ to be included at a later time*/
 .engaged{
     background-color: orange;
     color: whitesmoke;
-}
-.listbox{
-    display: none;
-    background-color: purple;
-    padding-left: 6px;
-}
-.fa-caret-down{
-    float: right;
-    padding-right: 8px;
-}
+} */
+
 
 
 
@@ -1135,6 +1154,9 @@ to be included at a later time*/
 
 .support{
     right: 0;
+}
+.AFF{
+    top: 2rem;
 }
 @media only screen and (min-width: 600px){
     #hamburger{

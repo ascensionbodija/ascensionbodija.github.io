@@ -8,27 +8,36 @@ function menuBar(){
     this.classList.toggle('flip');
     sidemenu.classList.toggle('vis');
 };
+
 let ham = document.querySelector('#hamburger');
 let sidemenu = document.querySelector('.sideBar');
 ham.addEventListener('click',menuBar);
 
 let land = document.querySelector('#landing');
-
-var displayHeight = window.innerHeight;
 let sideBar = document.querySelector(".sideBar");
-let sideBarTop = sideBar.getBoundingClientRect().top;
+var plusButton = document.getElementsByClassName("plus");
+var menuTitle = document.getElementsByClassName("menuTitle");
+var menuCaption = document.getElementsByClassName("menuCaption");
 
-let listButton = document.getElementsByClassName("listButton");
-let i;
-for(i=0;i<listButton.length;i++){
-    listButton[i].addEventListener('click',function(){
-        this.classList.toggle("active");
-        let listBoxContent = this.nextElementSibling;
-        if (listBoxContent.style.display === 'block'){
-            listBoxContent.style.display='none';
+for(let i=0;i<plusButton.length;i++){
+    plusButton[i].addEventListener('click',function(){
+        let collapsedMenuItem = this.nextElementSibling;
+        let titleMenuItem = this.previousElementSibling;
+
+        for(let i=0;i<plusButton.length;i++){
+        menuTitle[i].style.display='none';
+        menuCaption[i].classList.remove('active');
+        collapsedMenuItem.classList.remove('slidey');
+        }
+        if (collapsedMenuItem.style.display === 'block'){
+            collapsedMenuItem.style.display='none';
         }
         else{
-            listBoxContent.style.display='block';
+            collapsedMenuItem.style.display='block';
+            setTimeout(()=>{
+                collapsedMenuItem.classList.add('slidey');
+                titleMenuItem.classList.add('active');
+            },30);
         }
     });
 }
