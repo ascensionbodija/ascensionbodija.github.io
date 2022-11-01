@@ -16,7 +16,9 @@ ham.addEventListener('click',menuBar);
 let land = document.querySelector('#landing');
 let sideBar = document.querySelector(".sideBar");
 var plusButton = document.getElementsByClassName("plus");
+var moreOptions = document.getElementsByClassName("moreOptions");
 var menuTitle = document.getElementsByClassName("menuTitle");
+var subMenuTitle = document.getElementsByClassName("subMenuTitle");
 var menuCaption = document.getElementsByClassName("menuCaption");
 
 for(let i=0;i<plusButton.length;i++){
@@ -41,4 +43,26 @@ for(let i=0;i<plusButton.length;i++){
         }
     });
 }
+
+    for(let i=0; i<moreOptions.length; i++){
+        moreOptions[i].addEventListener('click', function(){
+            let collapsedMenu = this.nextElementSibling;
+            for(let i=0; i<moreOptions.length; i++){
+                subMenuTitle[i].style.display='none';
+                moreOptions[i].classList.remove('subActive');
+                collapsedMenu.classList.remove('subSlidey');
+            }
+            if (collapsedMenu.style.display==='block'){
+                collapsedMenu.style.display='none';
+            }
+            else{
+                collapsedMenu.style.display='block';
+                setTimeout(() => {
+                    collapsedMenu.classList.add('subSlidey');
+                    this.classList.add('subActive');
+                }, 30);
+            }
+        })
+    }
+    
 alert('Site under construction! Status quo for preview purposes only!');

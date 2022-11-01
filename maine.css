@@ -405,7 +405,7 @@ to be included at a later time*/
     display: block;
     position: absolute;
     scale: 0.7;
-    top: 0;
+    top: 0.3rem; left: 0.3rem;
     cursor: pointer;
 }
 .srg{
@@ -536,7 +536,7 @@ to be included at a later time*/
     .sectionC{
         margin-right: 0.3rem;
         margin-top: -0.4rem;
-    }/* recall that this contians the social media links*/
+    }/* recall that this contains the social media links*/
 
     .extras{
         right: 0;
@@ -714,7 +714,7 @@ to be included at a later time*/
         background-color: var(--menu_accent);
         opacity: 1;
         z-index: 3;
-        border-bottom: 2px outset var(--ig);
+        border-bottom: 1px solid var(--link_navHighlight);
     }
     /* 
     .menu{
@@ -867,24 +867,23 @@ to be included at a later time*/
 #sideBarBuffer{
     position: relative;
     top: 0;
+    z-index: 5;
     height: 7.5rem;
     width: 90%;
     /* background: #0099ff; */
     background: var(--menu_accent);
-    border-bottom-right-radius: 1rem;
     color: var(--menu_accent);
     color: whitesmoke;
-    /* font-weight: bold;  */
     font-style: italic;
-    z-index: 5;
+    border-bottom-right-radius: 1rem;
 }
 #sideBarBuffer p{
     position: absolute;
-    top: 4rem; right: 1rem;
+    top: 4.5rem; left: 1rem;
     font-size: 1rem;
     font-family: Nunito;
 }
-#sideBarContent{
+.sideBarContent{
     position: fixed;
     top: 7.68rem;
     width: 14rem;
@@ -893,7 +892,11 @@ to be included at a later time*/
     background-color: var(--link_nav);
     font-family: Nunito;
 }
-.sideBar, #sideBarBuffer, #sideBarContent{
+.sideBarContent a:hover{
+    color: var(--ig);
+}
+
+.sideBar, #sideBarBuffer, .sideBarContent{
     outline: none;
     user-select: none;
     text-decoration: none;
@@ -904,7 +907,7 @@ to be included at a later time*/
     width: 80%;
     font-size: 1rem;
     background: var(--link_nav);
-    padding: 0.6rem;
+    padding: 0.8rem;
     color: whitesmoke;
 }
 
@@ -913,51 +916,73 @@ to be included at a later time*/
     position: absolute;
     font-size: 1.3rem;
     width: 15%;
-    padding: 0.3rem;
+    padding: 0.44rem;
     left: 85%;
     background-color: transparent;
     background-color: var(--link_nav);
 }
 
-#sideBarContent .menuTitle a{
-    list-style: none;
-    font-size: 1rem;
-    background: var(--menu_accent);
-    box-sizing: border-box;
-    padding-top: 0.7rem;
-    padding-left: 1.5rem;
-    height: 2.5rem;
-    border-top: 1px solid var(--banner_accent);
+.menuTitle a:last-child, .subMenuTitle p:last-child{
+    border: 0px;
 }
 
-#sideBarContent a{
-    padding: 6px 8px 6px 16px;
+.mainLinks, .subLinks{
+    padding: 0.6rem 0rem 6px 1rem;
     color: white;
-    font-size: 1.2rem;
     text-decoration: none;
     display: block;
-    border: none;
     background: none;
     width: 100%;
     cursor: pointer;
     outline: none;
     text-align: left;
-} 
-
-#sideBarContent a:hover{
-    color: var(--ig);
+}
+.mainLinks{
+    box-sizing: border-box;
+    height: 2.5rem;
+    border-bottom: 1px solid var(--banner_accent);
+}
+.subLinks{
+    border-bottom: 1px solid var(--ig);
 }
 
-#sideBarContent a:first-of-type{
-    border-top: 0px;
+.moreOptions{
+    box-sizing: border-box;
+    padding-top: 0.7rem;
+    padding-left: 1rem;
+    height: 2.5rem;
+    border-bottom: 1px solid var(--ig);
+    color: whitesmoke;
 }
-.menuTitle{
+/* .moreOptions:active{
+    color: gray;
+} */
+.menuTitle, .subMenuTitle{
     position: relative;
     top: -8rem;
     display: none;
     opacity: 0;
     transition: 0.5s;
     z-index: -2;
+}
+.subMenuTitle{
+    width: auto; height:auto;
+    top: -2rem; left: 0rem;
+    display: none;
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 3;
+    border: none;
+}
+.subLinks{
+    position: relative; /*for indentation*/
+    top: 0rem;
+    width: 85%;
+    left: 2rem;
+    box-sizing: border-box;
+}
+.subLinks a{
+    color: var(--link_navHighlight);
 }
 
 /*there is an inexplicable clicking of the first link of every collapsible menu that occurs automatically when the caption beside the plus sign is clicked.
@@ -974,31 +999,24 @@ The captionflap was made to address this*/
 /*Note to self: remember that the order of placement of the flap before the maincaption 
 in the html, and the seemingly un-intuitive increased z-index in the stylesheet
 is to take the nextSibling property of the object used in the js into account.
-This flap was created after the fact. I can't be bothered to edit too many chunks of code;
+This flap was created after the fact. I can't be bothered to edit too many chunks of related code;
 */
 
 .slidey{
     top: 0;
     opacity: 1;
 }
+.subSlidey{
+    top: 0rem;
+    opacity: 1;
+}
 .active{
     background: var(--banner_accent);
     color: var(--ig);
 }
-
-/* .major{
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    padding: 0px 10px;
+.subActive{
+    color: gray;
 }
-
-.engaged{
-    background-color: orange;
-    color: whitesmoke;
-} */
-
-
-
 
 /*inchoate stage*/
 .vis{
@@ -1091,7 +1109,7 @@ This flap was created after the fact. I can't be bothered to edit too many chunk
     box-shadow: 0px 8px 16px 8px #000000cc;
 }
     .dropLinksExtra{
-        position: absolute; left: 5rem; top:-1rem;
+        position: absolute; left: 10rem; top:0;
         display: none;
         background-color: var(--menu_collapsedLinksCard);
         min-width: 18rem;
