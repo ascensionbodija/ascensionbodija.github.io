@@ -1023,7 +1023,7 @@ This flap was created after the fact. I can't be bothered to edit too many chunk
     transform: translateX(14rem);
 }
 .visa{
-    transform: translateX(1rem);
+    transform: translateX(0.01rem);
 }
 
 .reveal{
