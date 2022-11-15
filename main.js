@@ -7,6 +7,11 @@ quick, easy, long-term website maintenance in mind*/
 function menuBar(){
     this.classList.toggle('flip');
     sidemenu.classList.toggle('vis');
+    for(let i=0; i<menuCaption.length; i++){
+        menuCaption[i].classList.toggle('visa');
+        menuTitle[i].classList.toggle('visa');
+        submenuTitle[i].classList.toggle('visa');
+    }
 };
 
 let ham = document.querySelector('#hamburger');
