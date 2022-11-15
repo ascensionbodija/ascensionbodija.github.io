@@ -1020,10 +1020,13 @@ This flap was created after the fact. I can't be bothered to edit too many chunk
 
 /*inchoate stage*/
 .vis{
+    -webkit-transform: transalateX(14rem) linear;
     transform: translateX(14rem);
 }
 .reveal{
+    -webkit-transition: 1s;
     transition: 1s;
+    -webkit-transform: translateY(14.8rem);
     transform: translateY(14.8rem);
 }
 /*end inchoate stage*/
