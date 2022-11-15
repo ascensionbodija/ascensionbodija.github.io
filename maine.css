@@ -1022,6 +1022,10 @@ This flap was created after the fact. I can't be bothered to edit too many chunk
 .vis{
     transform: translateX(14rem);
 }
+.visa{
+    transform: translateX(1rem);
+}
+
 .reveal{
     transition: 1s;
     transform: translateY(14.8rem);
