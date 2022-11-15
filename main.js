@@ -70,4 +70,4 @@ for(let i=0;i<plusButton.length;i++){
         })
     }
     
-alert('Site under construction! Status quo for preview purposes only!');
+//alert('Site under construction! Status quo for preview purposes only!');
