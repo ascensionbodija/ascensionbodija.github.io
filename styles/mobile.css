@@ -223,7 +223,7 @@
 @media only screen and (max-width: 599px){
     .skedAb{
         font-size: 0.9rem;
-        letter-spacing: -2px;
+        letter-spacing: 1px;
         word-spacing: 1px;
     }
 
