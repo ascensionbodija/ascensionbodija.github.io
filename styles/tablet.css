@@ -1,0 +1,89 @@
+/*tablets*/
+@media only screen and (min-width: 600px) and (max-width: 959.98px){
+    *{
+        --bannerHeight: 4.5rem;
+        --landingHeight: 27rem;
+    }
+    
+    #landing{
+        background-size: cover;
+        height: var(--landingHeight);
+        /*avocat*/
+    }
+    #contrast{
+        height: var(--landingHeight);
+    }
+    #imgTop{
+        margin-left: 0.2rem;
+    }
+    #banner{
+        position: relative;
+        height: var(--bannerHeight);
+        grid-template-columns: 4fr 0fr 1fr 0fr;
+        grid-template-areas:
+        "ofu . . ."
+        "ofu ibuo ito ino"
+        "ofu ibuo ito ino"
+        "ofu ibuo ise ino"
+    }
+    #headerCaption{
+        margin-top: 0.8rem;
+    }
+    .sectionC{
+        margin-right: 0.3rem;
+        margin-top: -0.4rem;
+    }/* recall that this contains the social media links*/
+
+    .extras{
+        right: 0;
+    }
+    .dropBtn{
+        font-size: 0.7rem;
+        padding-right: 0.3rem;
+        box-sizing: content-box;
+    }
+
+    #imgBlk{
+        position: absolute;
+        top: 0.5rem;
+        width: 10.5rem;
+        height: 12rem;
+        left: -11rem;
+        border-bottom-left-radius: 0;
+        background-color: var(--imgBlk_accent);
+    }
+    .main{
+        position: absolute;
+        font-size: 2.5rem;
+        top: 6.5rem;
+        width: 16rem;
+        height: 11rem;
+        left: 17rem;
+        color: var(--accentMain_TabletMode);
+    }
+    .main p{
+        margin-top: 1.5rem;
+        font-family: Nunito;
+    }
+    #mst_head{
+        font-size: 1.3rem;
+        margin-right: 0rem;
+        text-align: center;
+    }
+    #mst_text{
+        font-size: 2rem;
+    }
+
+}
+
+@media only screen and (min-width:665px) and (max-width:859.98px){
+    #headerCaption{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width:860px) and (max-width:959.98px){
+    #headerCaption{
+        font-size: 2.5rem;
+    }
+}

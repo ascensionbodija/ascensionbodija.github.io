@@ -1,0 +1,70 @@
+@media only screen and (min-width: 960px){
+    #landing{
+        background-size: cover;
+        background-position-x: center;
+    }
+}
+
+/*low to mid res desktop*/
+@media only screen and (min-width: 960px) and (max-width: 1335.98px){
+    #banner{
+    grid-template-columns: 5.5fr 0fr 1.5fr 3fr;
+    grid-template-areas:
+    "ofu . . ."
+    "ofu ibuo ito ino"
+    "ofu ibuo ito ino"
+    "ofu ibuo ise ."
+}
+}
+
+/*overlap of low res device*/
+@media only screen and (min-width: 960px) and (max-width: 1024.98px){
+    #imgBlk{
+        width: 16rem;
+        height: 18rem;
+        top: -16rem; /*varies, dependent upon the '.main' div's position top*/
+        left: -20rem;
+    }
+    .main{
+        top: 13rem;     
+        width: 60%;
+        left: 23rem;
+        font-size: 4rem;
+    }
+}
+
+/*overlap of mid res desktop*/
+@media only screen and (min-width: 1025px){
+    #imgBlk{
+        width: 16rem;
+        height: 18rem;
+        top: -13rem;
+        left: -20rem;
+    }
+    .main{
+        top: 14rem;
+        width: 60%;
+        left: 23rem;
+        font-size: 4rem;
+    }
+}
+
+/* high res desktop*/
+@media only screen and (min-width: 1336px){
+    #imgBlk{
+        width: 15rem;
+        height: 17rem;
+        top: -12.7rem;
+        left: -15.2rem;
+        background-color: #00000000;
+    }
+    .main{
+        top: 13rem;
+        width: 65%;
+        left: 35%;
+        height: 10rem;
+        font-size: 4.2rem;
+    }
+}
+/*remember to keep query cascade in this order*/
+/*website not optimised for 4K resolution.. might get around to that later if time permits.
