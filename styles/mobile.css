@@ -220,6 +220,29 @@
     }
 
 }
+@media only screen and (max-width: 599px){
+    .skedAb{
+        font-size: 0.9rem;
+        letter-spacing: -2px;
+        word-spacing: 1px;
+    }
+
+    .welcomeText{
+        position: relative;
+        top: 0; right: 0;
+        width: 90%;
+        margin: auto;
+        font-family: Nunito;
+        font-size: 1rem;
+        box-sizing: content-box;
+        padding: 1rem;
+        word-spacing: 5px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+}
+
 
 /*low res mobiles*/
 

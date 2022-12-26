@@ -568,17 +568,11 @@ to be included at a later time*/
     border-radius: 0.3rem;
     font-family: 'Nunito';
     font-size: 0.9rem;
+    padding: 0.4rem;
     padding-top: 1rem;
+
 }
 
-@media only screen and (min-width:700px) and (max-width: 899.98px){
-    .skedAb{
-        font-size: 1.15rem;
-    }
-    .col_Content{
-        font-size: 1.25rem;
-    }
-}
 @media only screen and (min-width:900px){
     .skedAb, .col_Content {
         font-size: 1.5rem;
@@ -647,15 +641,6 @@ to be included at a later time*/
     color: rebeccapurple;
 }
 
-
-
-.temporary{
-    width: 98vw;
-    margin: auto;
-    height: 20vh;
-    background: blue;
-}
-
 #oneCol, #twoCol{
     width: 48%;
     height: 90%;
@@ -673,11 +658,61 @@ to be included at a later time*/
     
     width: 85%;
     height: 25%;
-    /* font-size: 0.9rem; */
     letter-spacing: 1px;
     line-height: 1.2;
     font-family: "Nunito";
 }
 .col_Space{
     height: 10%;
+}
+
+
+/*things that come after the stone tablets of mass times*/
+
+.middle{
+    position: relative;
+    width: 100vw;
+    background: var(--banner_accent);
+}
+
+.middle h2{
+    color: var(--link_nav);
+    font-family: 'Nunito';
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    text-align: left;
+    text-shadow: 
+    10px 10px 5px var(--link_nav);
+    letter-spacing: 3px;
+    line-height: 1.2;
+    font-size: 4.4rem;
+}
+
+.aisle{
+    position: relative;
+    width: 55%;
+    height: 30vw;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.aisle img{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.welcomeText{
+    position: absolute;
+    top: 5%; right: 2%;
+    width: 35%;
+    color: var(--menu_accent);
+    /* background: green; */
+    font-family: Nunito;
+    font-size: 1.8rem;
+    box-sizing: content-box;
+    padding: 1rem;
+    letter-spacing: -2px;
+    word-spacing: 10px;
+    line-height: 1.3;
 }
