@@ -1,0 +1,22 @@
+<div class="pgcntFrame">
+            <br>
+            <h2>Parish Registration</h2>
+            <br>
+            <p>Thank you for visiting our parish site. We are glad to have you, and we are hopeful you will stay, even as you prayerfully consider us as a worshipping community.</p>
+            <br>
+            <p>For registration, you can do that as an individual or you can register as a family. In either case you have to download, print out and fill in the form below, after which you can, at your earliest convenience, come over to the office and drop it off. You will be contacted via the means you indicated in the form.</p>
+            <br>
+            <a href="/documents/update.txt" download name='null' target="_blank">Click here to Download</a>
+            <br><br>
+            <h2>Office Hours</h2>
+            <br>
+            <p>The parish office is open for enquiries, mass bookings and other activities from Mondays to Fridays, 8:30am to 2pm. However, the availabilty of the priest is determined by his own schedule of activities for the day. </p>
+            <br>
+            <h2>Making an Appointment</h2>
+            <br>
+            <p>You can book an appointment with the priest at the reception desk. Alternatively, you can call the telephone numbers listed on our contact information bar.</p>
+            <br>
+            <h2>Counselling</h2>
+            <br>
+            <p>You can arrange personal or family counselling sessions with the priest in person or over the phone, as well as visitations and prayers for the sick and celeration of mass for the elderly or the infirm.</p>
+        </div>

@@ -1,0 +1,17 @@
+<div class="faithFrame">
+            <h1>Faith Formation</h1>
+            <br>
+            <h2>Bible Study</h2>
+            <p>The parish Bible Study session for youths takes place at the conference room at 4:00pm every Sunday.</p>
+            <p>Adult Bible Study takes place at 5:00pm every Sunday at the SS Peter & Paul Major Seminary, Bodija.</p>
+            <br>
+            <p>Come, let us share the word together.</p>
+            <br>
+            <h2>Cathechism</h2>
+            <p>Cathechism classes for confirmation and first Holy Communion both take place on Sundays from 4:00pm t0 5:30pm, inside the church.</p>
+            <br>
+            <h2>Infant Baptism</h2>
+            <p>Infant baptism is conducted arbitrarily, twice a month; typically on the first and third SATURDAYS of the month.</p>
+            <br>
+            <h4>Rights of Christian Initiation (RCIA) and Adult Cathechism classes are scheduled upon sufficient indication of interest.<br> Timing is determined based on what best suits all participants, and other considerations such as venue availability. </h3>
+        </div>

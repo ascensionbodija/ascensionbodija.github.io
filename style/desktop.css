@@ -1,0 +1,1069 @@
+@media only screen and (min-width: 1024px){
+    
+    *{
+        --bannerHeightWV: 14vh;
+        --menuHeightWV: 2.17rem;
+        --footerHeightWV: 80vh;
+        --landingImageHeight: calc(100vh - (var(--bannerHeightWV) + var(--menuHeightWV)));
+        --home_topLeft: #fff;
+        --menu_mainLinks: #ffffff;
+        --menu_collapsedLinks: #fff;
+        --menu_collapsedLinksBorders: #3c463b17;
+        --menu_collapsedLinksCard: #dfdad6;
+    }
+    
+    
+    
+    /******************************************/
+    /*title with top-corner church image inset*/
+    #home{
+        color: goldenrod;
+    }
+    #home:hover{
+        color: var(--menu_mainLinks);
+    }
+    
+    #headerCaptionWV{
+        font-family: Olde English Regular;
+        font-size: 170%;
+        font-weight: bold;
+        color: var(--link_nav);
+        margin-top: 4%;
+        line-height: 0.7;
+    }
+    #headerCaptionWV a {
+        color: var(--link_nav);
+    }
+    #headerCaptionWV a:hover{
+        color: var(--link_navHighlight);
+    }
+    #headerCaptionWV span{
+        font-family: Nunito;
+        font-size: 0.85rem;
+        cursor: auto;    
+    }
+    
+    /*menu bar*/
+    .menuWV{
+        width: 100vw;
+        position: sticky;
+        top: 0;
+        height: var(--menuHeightWV);
+        background-color: var(--menu_accent);
+        opacity: 1;
+        z-index: 3;
+    }
+    /*end of menu bar*/
+
+    /*the banner and associated links concerns*/
+    #bannerWV{
+        width: 100vw;
+        height: var(--bannerHeightWV);
+        background-color: var(--banner_accent);
+        opacity: 0.9;
+        display: grid;
+        grid-template-rows: 25% 20% 17.5% 37.5%;
+        grid-template-columns: 1fr 4fr 0fr 1fr 3fr;
+        grid-template-areas:
+        "ima ofu . . ."
+        "ima ofu ibuo ito ino"
+        "ima ofu ibuo ito ino"
+        "ima ofu ibuo ise ."
+    }
+    
+    .sectionP{
+        grid-area: ima;
+        background-image: url('/pic/Views/east.jpg');
+        background-size: 90%;
+        background-repeat: no-repeat;
+    }
+    
+    .sectionA{
+        grid-area: ofu;
+    }
+    .sectionB{
+        grid-area: ibuo;
+    }
+    
+    .sectionC{
+        grid-area: ito;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 10%;
+    }
+    .socWV{
+        height: 100%;
+        width: 30%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .socWV:hover{
+        transform: scale(1.3);
+    }
+    
+    #fbWeb{
+        background-image: url('/pic/logo-fb.svg');
+        
+    }
+    #igWeb{
+        background-image: url('/pic/logo-ig.svg');
+    }
+    #wsWeb{
+        background-image: url('/pic/logo-ws.svg');
+    }
+    /*end of social links concerns for desktop and tablets*/
+    
+    .sectionD{
+        grid-area: ino;
+        display: flex;
+    }
+    
+    #massEnq, #contEnq{
+        font-family: Nunito, garamond;
+        font-weight: bold;
+        padding-left: 9%;
+        font-size: 100%;
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+    
+    }
+    #massEnq a, #contEnq a{
+        color: var(--link_nav);
+    }
+    
+    /*end of optional mass & contacts buttons concerns*/
+    
+    .sectionE{
+        grid-area: ise;
+        /* background-color: aqua; */
+    }/*this section is to contain the intended
+    colour scheme-changing buttons for day and night browsing
+    to be included at a later time*/
+    
+    
+    .menuWV{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "menu1 menu2 menu3 menu4 menu5 menu6";
+    }
+    
+    .dropmenu1{
+        grid-area: menu1;
+    }
+    .dropmenu1:hover{
+        cursor: auto;
+    }
+    
+    .dropmenu2{
+        grid-area: menu2;
+    }
+    .dropmenu3{
+        grid-area: menu3;
+    }
+    .dropmenu4{
+        grid-area: menu4;
+    }
+    .dropmenu5{
+        grid-area: menu5;
+    }
+    .dropmenu6{
+        grid-area: menu6;
+        background: var(--fb);
+    }
+    .drop{
+        position: relative;
+        top: 0rem;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .dropBtn, .drop p{
+        color: var(--menu_mainLinks);
+        text-align: center;
+        padding-top: 0.6rem;
+        font-family: "Nunito bold";
+        font-size: 90%;
+    }
+    .dropBtn{
+        height: 1.5rem;
+    }
+    .dropLinks{
+        position: absolute;
+        display: none;
+        background-color: var(--menu_collapsedLinksCard);
+        min-width: 18rem;
+        box-shadow: 0px 8px 16px 8px #000000cc;
+    }
+        .dropLinksExtra{
+            position: absolute; left: 10rem; top:0;
+            display: none;
+            background-color: var(--menu_collapsedLinksCard);
+            min-width: 18rem;
+            box-shadow: 0px 8px 16px 8px #000000cc;
+    }
+    .dropLinks a{
+        padding: 0.8rem 2rem;
+        border: solid 1px var(--menu_collapsedLinksBorders);
+        color: var(--link_nav);
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: "Nunito italic";
+        text-decoration: none;
+        display: block;
+    }
+        .dropLinksExtra a{
+            padding: 0.8rem 2rem;
+            border: solid 1px var(--menu_collapsedLinksBorders);
+            color: var(--link_nav);
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: "Nunito italic";
+            text-decoration: none;
+            display: block;
+    }
+    
+    .dropLinks a:hover{
+        background-color: var(--menu_accent);
+        color: var(--menu_collapsedLinks);
+        font-weight: normal;
+    }
+        .dropLinksExtra a:hover{
+            background-color: var(--menu_accent);
+            color: var(--menu_collapsedLinks);
+            font-weight: normal;
+        }
+        
+    .drop:hover .dropLinks{
+        display: block;
+    }
+        .overview:hover .dropLinksExtra{
+            display: block;
+        }
+        .parishOffice:hover .dropLinksExtra{
+            display: block;
+        }
+        .adultFaith:hover .dropLinksExtra{
+            display: block;
+        }
+        .parishMaint:hover .dropLinksExtra{
+            display: block;
+        }
+        .specialPro:hover .dropLinksExtra{
+            display: block;
+        }
+    
+    .drop:hover{
+        background: var(--link_navHighlight);
+    }
+    
+    .support{
+        right: 0;
+    }
+    .AFF{
+        top: 2rem;
+    }
+    .SPRO{
+        top: 10rem;
+        left: -16rem;
+    }
+    .donate{
+        top: 4rem;
+        left: -16rem;
+    }
+
+/********************************************/
+/**items occuring after the banner and menu**/
+
+
+    .landingFrame{
+        position: relative;
+        width: 100vw;
+        height:var(--landingImageHeight);
+    }
+    #landingImage, #contrast{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #landingImage{
+        background: url("/pic/west.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: 10%;
+    }
+    #contrast{
+        background-color: #000;
+        opacity: 0.7;
+    }
+    #logoWV, #titleWV{
+        position: absolute;
+        top: 10%; left: 17%;
+        width: 25%;
+        height: 40%;
+    }
+    #logoWV{
+        height: 50%;
+    }
+
+    #titleWV{
+        left: 40%;
+        font-family: Nunito, garamond;
+        font-size: 260%;
+        box-sizing: border-box;
+        padding-left: 4%;
+        padding-top: 2%;
+        color: #fff;
+    }
+
+    /************************/
+    /****welcome concerns****/
+    .welcomeWV{
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        min-height: 98vh;
+        background-color: var(--banner_accent);
+    }
+    /*welcome concerns*/
+    .welcomeHeadWV{
+        width:100%;
+        height: 75%;
+        background-color: #360600;
+    }
+    .welcomeHeadWV h1{
+        color: #ffe600;
+        font-family: 'Nunito';
+        padding-top: 2%;
+        padding-bottom: 1%;
+        text-align: center;
+        text-shadow: 
+        10px 10px 5px var(--link_navHighlight);
+        letter-spacing: 3px;
+        line-height: 1.2;
+        font-size: 1.6rem;
+    }
+
+    .aisleFrameWV{
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 84.2%;
+    }
+    .aisleFrameWV img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .welcomeWriteWV{
+        width: 100%;
+        height: 25%;
+        background-color: #5a0e00ee;
+        /* box-sizing: border-box; */
+    }
+
+    .welcomeWriteWV p{
+        font-family: Nunito;
+        word-spacing: 6px;
+        line-height: 1.3;
+        letter-spacing: 1px;
+        color: #fafafa;
+        text-align: justify;
+        
+        margin: 6%;
+        margin-top: 2%;
+        font-size: 100%;
+    }
+    /************************/
+    /*end of welcome concers*/
+
+
+
+    /*schedule concerns*/
+    /*******************/
+    .scheduleWV{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        font-family: Nunito, garamond;
+        font-size: 150%;
+    }
+
+    #massCheckWV{
+        text-align: center;
+        position: relative;
+        margin-top: 5%;
+        font-weight: bold;
+        font-size: 160%;
+    }
+        #scheduleFrameWV{
+            position: absolute;
+            top: 0; left: 5%;
+            width: 90%;
+            height: 100%;
+            perspective: 1000px;
+            transform: scale(0.85);
+        }
+        .tabletWV{
+            position: absolute;
+            top: 10%;
+            height: 80%;
+            width: 30%;
+            background: var(--menu_accent);
+            color: whitesmoke;
+            font-family: Nunito, garamond;
+            z-index: 1;
+        }
+        .massWV{
+            height: 70%;
+            width: 28%;
+            border-top-left-radius: 3rem;
+            border-top-right-radius: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 85%;
+            z-index: 0;
+        }
+        .shieldWV{
+            transform-style: preserve-3d;
+            font-size: 95%;
+            padding: 2%;
+            box-sizing: border-box;
+            color: #970000;
+            border-radius: 0.2rem;
+            font-weight: bold;
+        }
+        .spaceWV{
+            width: 90%;
+            height: 20%;
+            margin-top: 1rem;
+            margin-bottom: -1rem;
+            color: var(--ig);
+        }
+        .slotWV{
+            width: 90%;
+            height: 25%;
+        }
+            #confWV{
+                left: -4%;
+                background-color: var(--banner_accent);
+                transform-origin: 20%;
+                transform: translateX(75%);
+            }
+            #dayWV{
+                top: 15%;
+                left: 22%;
+            }
+            #timeWV{
+                top: 15%;
+                left: 50.5%;
+            }
+            #adorWV{
+                left: 74%;
+                background-color: var(--banner_accent);
+                transform-origin: 80%;
+                transform: translateX(-75%);
+            }
+            #emusWV{
+                position: absolute;
+                top: 0; left: 0;
+                opacity: 0.3;
+                height: 100%; width: 100%;
+                background-image: url('/pic/cross-ador.jpg');
+                background-size: cover;
+                background-position-x: 35%;
+            }
+            #eitorWV{
+                position: absolute;
+                top: 0; left: 0;
+                opacity: 0.3;
+                height: 100%; width: 100%;
+                background-image: url('/pic/rosary_conf.jpg');
+                background-size: cover;
+                background-position-x: 45%;
+            }
+                #adorWV p{
+                    text-align: right;
+                    font-weight: bold;
+                }
+                .boldeWV{
+                    color: rebeccapurple;
+                    
+                    font-size: 120%;
+                }
+    /*end of schedule concerns*/
+    /**************************/
+
+
+/************************************/
+/***mass schdeule motion mechanics***/
+
+.leftWV{
+    animation-name: leftEmergeWV;
+    animation-duration: 0.45s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--cycle)*-0.35s);
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes leftEmergeWV {
+    0%{
+        transform: translateX(100%);
+    }
+    30%{
+        transform: translateX(75%);
+    }
+    50%{
+        transform: translateX(0%) rotateY(0deg);
+    }
+    75%{
+        transform: translateX(0%) rotateY(-25deg);
+    }
+    80%{
+        transform: translateX(0%) rotateY(-30deg);
+    }
+    100%{
+        transform: translateX(0%) rotateY(-30deg);
+    }
+}
+
+.rightWV{
+    animation-name: rightEmergeWV;
+    animation-duration: 0.45s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--cycle)*-0.35s);
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes rightEmergeWV {
+    0%{
+        transform: translateX(-100%);
+    }
+    30%{
+        transform: translateX(-75%);
+    }
+    50%{
+        transform: translateX(0%) rotateY(0deg);
+    }
+    75%{
+        transform: translateX(0%) rotateY(25deg);
+    }
+    80%{
+        transform: translateX(0%) rotateY(30deg);
+    }
+    100%{
+        transform: translateX(0%) rotateY(30deg);
+    }
+}
+
+
+/************************************/
+                .someheade{
+                    position: relative;
+                    top: 0; left: 15%;
+                    width: 70vw;
+                    height: 100vh;
+                }
+                #ExtrasWV{
+                    font-size: 250%;
+                    position: relative;
+                    top: 5%;
+                    left: 20%;
+                    font-family: Nunito bold;
+                    color: whitesmoke;
+                }
+    
+/***********************/
+.activity{
+    position: relative;
+    top: 10%; left:-10%;
+    width: 65%;
+
+    height: 140%;
+    min-height: 50vh;
+    background-color: #5a3e37b2;
+    background-color: var(--banner_accent);
+    font-family: Nunito, Helvetica;
+}
+/*activity concerns*/
+.cap{
+    position: relative;
+    left: 5%;
+    width: 50%;
+    height: 10%;
+    
+    top: 4%; 
+    font-size: 120%;
+}
+#scrollLatestWV{
+    position: absolute;
+    top: 0;
+    top: 10%; left: 5%;
+    background: black;
+    width: 60%;
+    height: 45%;
+
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    border: 2px solid var(--menu_accent);
+}
+
+.new{
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    font-size: 85%;
+}
+.pic{
+    position: absolute;
+    top: 0%; left: 0%;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 8%;
+}
+.picGradient{
+    position: absolute;
+    top: 14%; left: 5%;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#4b000000 40%, black 50%);
+    opacity: 0.5;
+}
+.picGradientM{
+    position: absolute;
+    top: 14%; left: 5%;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#4b000000 30%, #5e0000 40%, #5e0000, black 95%);
+    opacity: 0.7;
+}
+    .future{
+        background-image: url('/pic/Views/altar-rv.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .society{
+        background-image: url('/pic/Views/anthony.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .meditat{
+        background-image: url('/pic/Views/sacrist-top.jpg');
+        background-repeat: no-repeat;
+        background-size: 120%;
+        background-position-x: 100%;
+    }
+    .retreat{
+        background-image: url('/pic/Views/tabernacle.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+.arrow{
+    position: absolute;
+    top: 0; 
+    width: 45%;
+    height: auto;
+    font-size: 150%;
+    text-indent: 30%;
+    border: 2px solid black;
+}
+.arrow:hover{
+    cursor: pointer;
+}
+
+.arrow:active{
+    border: 1px outset red;
+}
+    #forwardWV{
+        border-top-right-radius: 20%;
+        left: 50%;
+        transform: rotateY(360deg);
+    }
+    #backwardWV{
+        border-top-right-radius: 20%;
+        transform: rotateY(-180deg);
+    }
+
+.tex{
+    position: absolute;
+    color: #ffd000;
+    box-sizing: border-box;
+    
+    top: 60%; 
+    left: 5%;
+    width: 90%;
+    height: 35%;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+.tex h2 a{
+    color: #ffd000;
+}
+
+.tex p, .tex p a{
+    color: white;
+    text-align: justify;
+    line-height: 1.2;
+
+    font-size: 110%;
+}
+.texNav{
+    position: absolute;
+    top: 60%; left: 5%;
+    width: 30%;
+    height: 5%;
+}
+
+.n0{
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    width: 50%;
+    height: 7%;
+    font-weight: bold;
+    color: var(--fb);
+    text-align: right;
+    
+    font-size: 150%;
+}
+.box{
+    position: absolute;
+    top: 75%;
+    width: 30%;
+    height: 12%;
+}
+.box a{
+    color: inherit;
+}
+.box p{
+    position: absolute;
+    top: 100%;
+    font-weight: bold;
+    color: var(--link_nav);
+
+    font-size: 100%;
+}
+.box:hover p{
+    transform: translateY(-3rem);
+    transition: 0.5s;
+        color: var(--ig);
+        background-color: #000000a1;
+}
+.n1{
+    left: 2%;
+    background-image: url('/pic/Views/ourLady.jpg');
+    background-size: cover;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+}
+.n2{
+    left: 35%;
+    background-image: url('/pic/directed.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.n3{
+    left: 68%;
+    background-image: url('/pic/cross-ador.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/**************************/
+/*end of activity concerns*/
+
+
+/**********************/
+/****theme concerns****/
+.themeWV{
+    position: absolute;
+    top: 5%; left: 60%;
+    height: 45%; width: 35%;
+    background-color: var(--banner);
+    border-radius: 15%;
+}
+    #themeBoxWV{
+        position: relative;
+        top:10%; left: 10%;
+        width: 80%;
+        height: 70%;
+        box-sizing: border-box;
+        font-family: Nunito, Garamond;
+        color: var(--menu_accent);
+        
+        line-height: 1.7;
+    }
+    #themeBoxWV p:first-of-type{
+        text-align: center;
+
+        font-size: 100%;
+    }
+    #themeBoxWV p:nth-of-type(2){
+        margin-top: 1%;
+        font-style: italic;
+        letter-spacing: -0.05rem;
+        word-spacing: -0.05rem;
+        color: var(--link_nav);
+
+        text-align: center;
+        font-size: 140%;
+    }
+    #themeBoxWV p:nth-of-type(3){
+        
+        text-align: center;
+        font-size: 100%;
+    }
+    #themeBoxWV hr{
+        margin: auto;
+        margin-top: 0.6rem;
+        margin-bottom: 1rem;
+        width: 60%;
+        background-color: var(--menu_accent);
+        
+        height: 0.7%;
+    }
+/*end of theme concerns*/
+/***********************/
+
+/***************************/
+/**instagram feed concerns**/
+
+.feedCaption{
+    position: absolute;
+    top: 55%; left: 40%;
+    width: 30%;
+    height: 10%;
+    background: var(--fb);
+    background: var(--menu_accent);
+    background: darkolivegreen;
+    background-color: #5a0e00;
+
+    color: #fff;
+    font-family: Nunito;
+    font-size: 180%;
+}
+.someheade{
+    background-color: darkolivegreen;
+    background-color: #5a0e00;
+
+}
+.feedCaption p{
+    margin-top: 6%;
+    text-align: center;
+}
+.IG{
+    width: 35%;
+    height: 35%;
+    background-color: #000;
+    position: absolute;
+    overflow-y: scroll;
+    border: 2px solid var(--fb);
+}
+.IG::-webkit-scrollbar{
+    width: 0.7rem;
+    height: 0rem;
+    background-color: #4e443e;
+}
+.IG::-webkit-scrollbar-thumb{
+    background-color: red;
+    width: 1rem;
+    border-radius: 2rem;
+}
+
+.feed1{
+    top: 70%; left: 40%;
+}
+.feed2{
+    top: 70%; left: 77%;
+}
+.feed3{
+    top: 110%; left: 77%;
+}
+
+/***end of feed concerns***/
+/**************************/
+
+.footerWV{
+    position: relative;
+    top: 35vw;
+    width: 100vw;
+    height: var(--footerHeightWV);
+    background: #303030;
+}
+/***************************/
+/*footer concerns*/
+    .footBoxWV{
+        position: absolute;
+        top: 0;
+        width: 100%; height: 100%;
+        background-color: transparent;
+    }
+    .shoepadWV{
+        height: 5%;
+    }
+    .footCol1WV{
+        position: relative;
+        width: 100%; 
+        height: 35%;
+
+    }
+        #footImgWV{
+            position: absolute;
+            width: 20%;
+            height: 100%;
+            
+            left: 30%;
+        }
+            #footImgWV img{
+                width: 100%;
+                height: 100%;
+            }
+        #nameBoxWV{
+            position: absolute;
+            width: 45%;
+            min-width: 55%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0.4rem;
+            margin-top: 1.7rem;
+            
+            left: 50%;
+        }
+            #nameBoxWV p{
+                color: white;
+                font-family: Nunito;
+            }
+            #nameBoxWV p span:nth-of-type(4){
+                color: #dbcdcd;
+                font-size: 1.5rem;
+                margin-left: 0.1rem;
+                letter-spacing: 1.6rem;
+                font-weight: bold;
+            }
+            #nameBoxWV p span:nth-of-type(3){
+                font-size: 1.75rem;
+                letter-spacing: -1px;
+                word-spacing: 0.5rem;
+                color: var(--ig);
+            }
+            #nameBoxWV p span:nth-of-type(2){
+                font-weight: normal;
+                color: slategray;
+                letter-spacing: 3px;
+                
+                line-height: 1.5;
+                font-size: 1.2rem;
+                margin-left: 13%;
+            }
+            #nameBoxWV p span:nth-of-type(1){
+                font-weight: normal;
+                color: slategray;
+                word-spacing: 5px;
+                font-size: 1.4rem;
+            }
+    #footBarWV{
+        width: 90%;
+        height: 0.5%;
+        margin: auto;
+        margin-top: 3%;
+        background-color: whitesmoke;
+    }
+    #addressBoxWV{
+        height: 15%;
+        margin: 1rem;
+        font-size: 62%;
+        box-sizing: border-box;
+        
+        word-spacing: 5px;
+        letter-spacing: 1px;
+        margin-left: 33%;
+        width: 35%;
+    }
+    @media only screen and (min-width: 1180px){
+    #addressBoxWV{
+        font-size: 65%;
+        margin-left: 35%;
+        width: 35%;
+    }
+    }
+    @media only screen and (min-width: 1200px){
+    #addressBoxWV{
+        font-size: 65%;
+        margin-left: 37%;
+        width: 30%;
+    }
+    }
+        #addressBoxWV p{
+            font-family: Nunito;
+            color: #dbcdcd;
+
+            font-size: 135%;
+            line-height: 1.2;
+        }
+        #addressBoxWV a{
+            color: var(--ig);
+        }
+    
+    #mediaLinksWV{
+        position: relative;
+        width: 100%;
+        height: 10%;
+        
+        top: 0rem;
+    }
+        .fbFrameWV, .igFrameWV{
+            position: absolute;
+            top: 10%;
+            width: 10%;
+            height: 80%;
+            left: 40%;
+        }
+        .igFrameWV{
+            left: 50%;
+        }
+        .mmsImgWV{
+            width: 100%; height: 100%;
+        }
+    
+    #siteCreditsWV{
+        width: 100%;
+        height: 20%;
+        font-family: Nunito;
+    }
+        #siteCreditsWV a{
+            color: var(--ig);
+        }
+        #siteCreditsWV p{
+            color: slategray;
+            text-align: center;
+
+            font-size: 80%;
+        }
+        #siteCreditsWV p:nth-of-type(2){
+            word-spacing: 3px;
+            padding-top: 0.1rem;
+        }
+        #siteCreditsWV p:nth-of-type(3) span{
+            color: red;
+        }
+/************************/
+/*end of footer concerns*/
+
+/*************************************************/        
+/*************************************************/
+
+}

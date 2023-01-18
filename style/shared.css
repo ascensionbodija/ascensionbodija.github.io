@@ -1,0 +1,189 @@
+/*  The site as a whole has been written using HTML 5, 
+    vanilla JavaScript (ES6) and CSS3 with strong emphasis on 
+    quick, easy, long-term website maintenance in mind.
+
+    When adding new features, please refrain from using frameworks 
+    like bootstrap, or the reactJS library, unless absolutely
+    necessary. 
+    
+    If it is perhaps that you wish to redesign the site from 
+    scratch, that is another matter; but as it stands 
+    for current purposes, it may not readily be seen as
+    to why going through such great efforts would be useful.
+
+    There is a comprehensive log as to all implementations made 
+    by way of comment-based clarifications, as needed.
+    Simply put, the code is straightforward enough for anyone 
+    who knows what they are doing.
+*/
+
+*{
+    margin: 0;
+    padding: 0; 
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    
+    --banner: #dfdad6;
+    --banner_accent: #dfdad6bb;
+    --menu_accent:#726259;
+    --contrast_accent: #00000099;
+    --link_nav: #4e443e;
+    --link_navHighlight: #ca983d;
+    --ig: #daa520;
+    --fb: #3c67b2;
+    --ws: #0c9600;
+}
+
+body::-webkit-scrollbar{
+    width: 0.7rem; height:0;
+}
+body::-webkit-scrollbar-track{
+    border-radius: 2rem;
+    box-shadow: inset 0px 0px 20px var(--fb);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--fb);
+    width: 1rem;
+    border-radius: 2rem;
+}
+body::-webkit-scrollbar-thumb:hover{
+    cursor: help;
+    background-color: #4e443e;
+}
+body a{
+    text-decoration: none;
+}
+.link{
+    cursor: pointer;
+}
+.sidebar::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.situ{
+    width: 100%;
+    height: 100%;
+}
+
+/*fonts embedded*/
+@font-face {
+    font-family: 'Nunito Italic';
+    src: url('/fonts/Nunito-italic.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-regular.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Nunito bold';
+    src: url('/fonts/Nunito-bold.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Olde English Regular';
+    src: url('/fonts/OldeEnglish.woff') format('woff');
+    }
+
+/************************************/
+/***mass schdeule motion mechanics***/
+
+.left{
+    animation-name: leftEmerge;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--cycle)*-3.2s);
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes leftEmerge {
+    0%{
+        transform: translateX(75%);
+    }
+    50%{
+        transform: translateX(0%) rotateY(0deg);
+    }
+    75%{
+        transform: translateX(0%) rotateY(-15deg);
+    }
+    100%{
+        transform: translateX(0%) rotateY(-30deg);
+    }
+}
+
+.right{
+    animation-name: rightEmerge;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--cycle)*-3.2s);
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes rightEmerge {
+    0%{
+        transform: translateX(-75%);
+    }
+    50%{
+        transform: translateX(0%) rotateY(0deg);
+    }
+    75%{
+        transform: translateX(0%) rotateY(15deg);
+    }
+    100%{
+        transform: translateX(0%) rotateY(30deg);
+    }
+}
+
+/*these classes are the slide motion of the menu and submenu when opened*/
+.inview{
+    animation-name: slide;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-delay: 0.01s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+@keyframes slide {
+    0%{
+        transform: translateY(-40%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.outview{
+    animation-name: slope;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-delay: 0.01s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+@keyframes slope {
+    0%{
+        transform: translateY(40%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (min-width: 750px){
+    .main, .sidebar{
+        display: none;
+    }
+}
+@media only screen and (max-width: 749.98px){
+    .all{
+        display: none;
+    }
+}

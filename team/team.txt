@@ -1,0 +1,57 @@
+<div class="diy maj">
+                <div class="de">
+                    <div class="jan"></div>
+                    <div class="writ">
+                        <br>
+                        <h4>Rev. Fr. Patrick Akinjo</h4>
+                        <p>Parish Priest</p>
+                    </div>
+                </div>
+                <div class="de">
+                    <div class="jan"></div>
+                    <div class="writ">
+                        <br>
+                        <h4>Rev. Fr. Callistus Orjika</h4>
+                        <p>Assistant Parish Priest</p>
+                    </div>
+                </div>
+                <div class="de">
+                    <div class="jan">
+                        <img class='fitImg' src="/pic/team/archB.jpg"/>
+                    </div>
+                    <div class="writ">
+                        <br>
+                        <h4>Most Rev. Gabriel Abegurin</h4>
+                        <p>Local Ordinary</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diy min">
+                <div class="de">
+                    <div class="jan">
+                        <img class='fitImg' src="/pic/team/DDL.jpeg"/>
+                    </div>
+                    <div class="writ">
+                        <br>
+                        <p>DDL Sisters</p>
+                    </div>
+                </div>
+                <div class="de">
+                    <div class="jan">
+                        <img class='fitImg' src="/pic/team/DOChty.png"/>
+                    </div>
+                    <div class="writ">
+                        <br>
+                        <p>Daughters of Charity</p>
+                    </div>
+                </div>
+                <div class="de">
+                    <div class="jan">
+                        <img class='fitImg' src="/pic/team/vocationist.gif"/>
+                    </div>
+                    <div class="writ">
+                        <br>
+                        <p>Vocationist Sisters</p>
+                    </div>
+                </div>
+            </div>

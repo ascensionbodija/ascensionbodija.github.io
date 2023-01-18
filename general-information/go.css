@@ -1,0 +1,41 @@
+.pgcntFrame{
+    position: absolute;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0.5rem;
+    color: var(--link_nav);
+    text-align: justify;
+    font-size: 130%;
+    line-height: 1.1;
+}
+.pgcntFrame .clickable{
+    color: var(--link_navHighlight);
+    cursor: pointer;
+}
+.pageContent{
+    height: 45rem;
+}
+.pageContentWV{
+    height: 38rem;
+}
+.anthemCall, .anthemCallWV, .themeCall, .themeCallWV{
+    opacity: 0;
+    display: none;
+    transition: 0.5s;
+    font-size: 80%;
+}
+.geninfo, .geninfoWV{
+    position: absolute;
+    display: none;
+    opacity: 0;
+    left: 5%;
+    top: 15%;
+    width: 80%;
+    height: 25rem;
+    background: slategray;
+    overflow-y: scroll;
+}
+.geninfoWV{
+    top: 10%;
+}
+

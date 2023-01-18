@@ -1,0 +1,9 @@
+.faithFrame{
+    position: relative;
+    top: 5%; left: 10%;
+    width: 80%;
+    height: 80%;
+    font-size: 100%;
+    line-height: 1.2;
+    color: var(--link_nav);
+}

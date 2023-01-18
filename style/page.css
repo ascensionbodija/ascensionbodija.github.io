@@ -1,0 +1,44 @@
+*{
+    --OneRem: calc(var(--innerHeight)*0.025px);
+    --viewheightInPixels: calc(var(--innerHeight)*1px);
+    /* --combine: calc(
+        var(--bannerHeight)
+        + var(--menuHeight) 
+        + var(--footerHeight));
+    --pageWedge: calc(var(--viewheightInPixels) - var(--combine));
+    
+    --combineWV: calc(
+            var(--bannerHeightWV)
+            + var(--menuHeightWV) 
+            + var(--footerHeightWV));
+    --pageWedgeWV: calc(var(--viewheightInPixels) - var(--combineWV)); */    
+}
+
+body{
+    background-color: slategrey;
+}
+.pageContent{
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 31rem;
+    background-color: var(--banner);
+    font-family: Nunito;
+}
+.pageContentWV{
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 35rem;
+    background-color: var(--banner);
+    font-family: Nunito;
+}
+
+/*the top margin of the footer is dependent on the final height of the uploaded content*/
+.footer{
+    top: calc(var(--bannerHeight) + var(--menuHeight));
+    top: 0;
+}
+.footerWV{
+    top: 0;
+}

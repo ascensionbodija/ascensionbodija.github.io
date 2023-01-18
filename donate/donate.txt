@@ -1,0 +1,21 @@
+<div class="donateFrame">
+            <h1>Help Support the Parish!</h1>
+            <br>
+            <p>
+                We have been able to thrive due to the support of our generous community.
+            </p><br>
+            <p>
+                All donations we receive are duly accounted for, with a stewardship report made availabe to the parishioners by the aegis of the Parish Laity Council. We are always grateful for whatever we receive, as it goes a long way to the organisation of the parish as a whole, as well as our charity outreaches and miscellaneous programs.
+            </p>
+            <br>
+            <h2>Parish Account</h2><br>
+            <p style="font-weight: bold;">Zenith Bank <br> 101302472 </p>
+            <br><br>
+            <h2>Tithes</h2>
+            <br>
+            <p>
+                Parishioners who wish to pay their tithes online can do so via this account:<br><br> <span style="font-weight: bold">First Bank <br> 2000060161</span>
+            </p>
+            <br>
+            <p style="font-weight: bold; font-style: italic; text-align: right;">P.S. the Parish Needs DIESEL! We welcome donations for that, and also for the support of printing of the Sunday bulletin.</p>
+        </div>

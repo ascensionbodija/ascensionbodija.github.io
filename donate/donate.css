@@ -1,0 +1,16 @@
+.donateFrame{
+    position: relative;
+    top: 5%;
+    width: 84%;
+    left: 8%;
+    height: 80%;
+    font-size: 110%;
+    word-spacing: 0.2rem;
+    color: var(--link_nav);
+}
+.pageContent{
+    height: 53rem;
+}
+.pageContentWV{
+    height: 38rem;
+}

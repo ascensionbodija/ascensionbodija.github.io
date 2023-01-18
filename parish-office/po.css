@@ -1,0 +1,16 @@
+.pgcntFrame{
+    position: absolute;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0.5rem;
+    color: var(--link_nav);
+    text-align: justify;
+    font-size: 105%;
+    line-height: 1.1;
+}
+.pageContent{
+    height: 54rem;
+}
+.pageContentWV{
+    height: 38rem;
+}

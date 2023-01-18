@@ -1,0 +1,1020 @@
+@media only screen and (max-width: 599.98px){
+    *{
+        --bannerHeight: 4.4rem;
+        --menuHeight: 2.4rem;
+        --footerHeight: 20rem;
+    }
+    .main {
+        position: relative;
+        width: 100vw;
+    }
+
+    .item{
+        position: relative;
+        width: 100%;
+    }
+    .menu{
+        z-index: 3;
+    }
+    .header{
+        z-index: 3;
+    }
+    .fit{
+        position: absolute; top: 0;
+        width: 100%; height: 100%;
+    }
+
+/***********************/
+    .header{
+        height: var(--bannerHeight);
+        background-color: var(--banner);
+        display: grid;
+        column-gap: 2%;
+        grid-template-columns: 0.5fr 1.5fr 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        "image title switch"
+        "image title social";
+    }
+/*header concerns*/
+    #headImg{
+        grid-area: image;
+
+    }
+        #headImg img{
+            width: 100%; height: 100%;
+            border: 3px solid var(--menu_accent);
+            border-radius: 0.5rem;
+        }
+    #headTitle{
+        grid-area: title;
+        box-sizing: border-box;
+    }   
+        #headTitle p{
+            font-family: 'Olde English Regular', Garamond, Helvetica;
+            font-size: 167%;
+            font-weight: bold;
+            letter-spacing: -1px;
+            word-spacing: -1px;
+            color: var(--link_nav);
+            font-weight: bold;
+            padding-top: 0.4rem;
+            line-height: 0.92;
+        }
+    #headSwitch{
+        grid-area: switch;
+        /* background-color: red; */
+    }
+    #headSocial{
+        grid-area: social;
+        display: flex;
+        justify-content: space-evenly;
+
+        animation-name: a_soc;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-play-state: paused;
+        animation-delay: calc(var(--cycle) * -3s);
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes a_soc{
+        0%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        99%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(120%);
+            opacity: 0;   
+        }
+    }
+    
+        .sm{
+            position: relative;
+            width: 30%; height: 100%;
+        }
+        #fb{
+            background-image: url('/pic/logo-fb.svg');
+            background-repeat: no-repeat;
+        }
+        #ig{
+            background-image: url('/pic/logo-ig.svg');
+            background-repeat: no-repeat;
+        }
+        #ws{
+            background-image: url('/pic/logo-ws.svg');
+            background-repeat: no-repeat;
+        }
+        
+
+/************************/
+/*end of header concerns*/
+
+    .menu{
+        position: sticky;
+        top: 0;
+        height: var(--menuHeight);
+        border-bottom: 0.15rem solid var(--link_navHighlight);
+        background-color: var(--menu_accent);
+    }
+
+    #sm_Min{
+        position: absolute;
+        top: 0; right: 1%;
+        width: 33%;
+        height: 100%;
+    }
+    
+    .smM{
+        position: absolute;
+        width: 30%; height: 100%;
+        top: 0;
+
+        animation-name: b_soc;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-play-state: paused;
+        animation-delay: calc(var(--cycle) * -3s);
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    @keyframes b_soc{
+        0%{
+            opacity: 0;
+        }
+        99%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;   
+        }
+    }
+
+    #fbM{
+       left: 3%;
+    }
+    #igM{
+        left: 36%;
+    }
+    #wsM{
+        left: 69%;
+    }
+
+/************************/
+/*** theme concerns *****/
+
+    .theme{
+        height: 13rem;
+    }
+        #themeBox{
+            position: absolute;
+            top:10%; left: 10%;
+            width: 80%;
+            height: 80%;
+            box-sizing: border-box;
+            line-height: 1.2;
+            font-family: Nunito, Garamond;
+            color: var(--menu_accent);
+        }
+        #themeBox p:first-of-type{
+            text-align: center;
+            font-size: 105%;
+        }
+        #themeBox p:nth-of-type(2){
+            margin-top: 1%;
+            font-size: 150%;
+            font-style: italic;
+            letter-spacing: -0.05rem;
+            word-spacing: -0.05rem;
+            color: var(--link_nav);
+            /* font-weight: bold; */
+        }
+        #themeBox p:nth-of-type(3){
+            text-align: right;
+            font-size: 100%;
+        }
+        #themeBox hr{
+            margin: auto;
+            margin-top: 0.6rem;
+            margin-bottom: 1rem;
+            width: 60%;
+            height: 0.5%;
+            background-color: var(--menu_accent);
+        }
+
+    /*end of theme concerns*/
+    /***********************/
+
+    .backdrop{
+        height: 25.5rem;
+        background-color: var(--contrast_accent);
+        background-image: url('/pic/west.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 50%;
+    }
+    /*******************/
+    /*backdrop concerns*/
+        #contrast{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--contrast_accent);
+        }
+        #logoFrame{
+            position: absolute;
+            top: 5%; left: 10%;
+            width: 45%;
+            height: 50%;
+        }
+            #logoFrame img{
+                width: 100%;
+                height: 100%;
+            }
+
+        #captionFrame{
+            position: absolute;
+            top: 8%; left: 57%;
+            width: 40%;
+            height: 50%;
+            /* background-color: var(--ws); */
+            box-sizing: border-box;
+            padding: 0.1rem;
+        }
+        #captionFrame p{
+            font-size: 150%;
+            color: whitesmoke;
+            font-family: Nunito, Garamond;
+        }
+    /*end of backdrop concerns*/
+    /**************************/
+
+    .schedule{
+        height: 25rem;
+        font-family: Nunito, garamond;
+    }
+    /*schedule concerns*/
+    /*******************/
+    #massCheck{
+        text-align: center;
+        padding-top: 2%;
+        font-weight: bold;
+    }
+        #scheduleFrame{
+            position: absolute;
+            top: 0; left: 5%;
+            width: 90%;
+            height: 100%;
+            perspective: 1000px;
+        }
+        .tablet{
+            position: absolute;
+            top: 10%;
+            height: 80%;
+            width: 30%;
+            background: var(--menu_accent);
+            color: whitesmoke;
+            font-family: Nunito, garamond;
+            z-index: 1;
+        }
+        .mass{
+            height: 70%;
+            width: 28%;
+            border-top-left-radius: 3rem;
+            border-top-right-radius: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 85%;
+            z-index: 0;
+        }
+        .shield{
+            transform-style: preserve-3d;
+            font-size: 95%;
+            padding: 2%;
+            box-sizing: border-box;
+            color: rgb(151, 0, 0);
+            border-radius: 0.2rem;
+            font-weight: bold;
+        }
+        .space{
+            width: 90%;
+            height: 20%;
+            margin-top: 1rem;
+            margin-bottom: -1rem;
+            color: var(--ig);
+        }
+        .slot{
+            width: 90%;
+            height: 25%;
+        }
+            #conf{
+                left: -4%;
+                background-color: var(--banner_accent);
+                transform-origin: 20%;
+                transform: translateX(75%);
+            }
+            #day{
+                left: 22%;
+            }
+            #time{
+                left: 50.5%;
+            }
+            #ador{
+                left: 74%;
+                background-color: var(--banner_accent);
+                transform-origin: 80%;
+                transform: translateX(-75%);
+            }
+            #emus{
+                position: absolute;
+                top: 0; left: 0;
+                opacity: 0.3;
+                height: 100%; width: 100%;
+                background-image: url('/pic/cross-ador.jpg');
+                background-size: cover;
+                background-position-x: 35%;
+            }
+            #eitor{
+                position: absolute;
+                top: 0; left: 0;
+                opacity: 0.3;
+                height: 100%; width: 100%;
+                background-image: url('/pic/rosary_conf.jpg');
+                background-size: cover;
+                background-position-x: 45%;
+            }
+                #ador p{
+                    text-align: right;
+                    font-weight: bold;
+                }
+                .bolde{
+                    color: rebeccapurple;
+                    font-size: 100%;
+                }
+    /*end of schedule concerns*/
+    /**************************/
+
+
+    /***********************/
+    .welcome{
+        height: 48rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 48rem;
+        background-color: var(--banner_accent);
+    }
+    /*welcome concerns*/
+    .welcomeHead{
+        width:100%;
+        height: 50%;
+        background-color: #4d0900;
+    }
+    .welcomeHead h1{
+        color: var(--link_nav);
+        color: #ffe600;
+        font-family: 'Nunito';
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        text-shadow: 
+        10px 10px 5px var(--link_navHighlight);
+        letter-spacing: 3px;
+        line-height: 1.2;
+        font-size: 1.6rem;
+    }
+
+    .aisleFrame{
+        position: relative;
+        width: 100%;
+        height: 70%;
+    }
+    .aisleFrame img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .welcomeWrite{
+        width: 100%;
+        height: 50%;
+        background-color: #800606;
+
+    }
+
+    .welcomeWrite p{
+        font-family: Nunito;
+        font-size: 1rem;
+        box-sizing: border-box;
+        padding: 1rem;
+        padding-top: 1rem;
+        word-spacing: 6px;
+        line-height: 1.3;
+        letter-spacing: -1px;
+        color: #fafafa;
+        text-align: justify;
+    }
+    /************************/
+    /*end of welcome concers*/
+
+
+    /***********************/
+    .activity{
+        height: 50rem;
+        background-color: var(--banner_accent);
+        font-family: Nunito, Helvetica;
+    }
+/*activity concerns*/
+    .cap{
+        position: relative;
+        top: 2%; left: 5%;
+        width: 50%;
+        height: 10%;
+        font-size: 110%;
+    }
+    #scrollLatest{
+        position: absolute;
+        top: 0;
+        top: 14%; left: 5%;
+        background: black;
+        width: 70%;
+        height: 50%;
+
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .new{
+        position: relative;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        min-width: 100%;
+    }
+    .pic{
+        position: absolute;
+        top: 0%; left: 0%;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 8%;
+    }
+    .picGradient{
+        position: absolute;
+        top: 14%; left: 5%;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(#4b000000 40%, black 50%);
+        opacity: 0.5;
+    }
+    .picGradientM{
+        position: absolute;
+        top: 14%; left: 5%;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(#4b000000 30%, #5e0000 40%, #5e0000, black 95%);
+        opacity: 0.7;
+    }
+        .future{
+            background-image: url('/pic/Views/altar-rv.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .society{
+            background-image: url('/pic/Views/anthony.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .meditat{
+            background-image: url('/pic/Views/sacrist-top.jpg');
+            background-repeat: no-repeat;
+            background-size: 120%;
+            background-position-x: 100%;
+        }
+        .retreat{
+            background-image: url('/pic/Views/tabernacle.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    .arrow{
+        position: absolute;
+        top: 0; 
+        width: 45%;
+        height: auto;
+        font-size: 150%;
+        text-indent: 30%;
+        border: 2px solid black;
+    }
+    .arrow:active{
+        border: 1px outset red;
+    }
+        #forward{
+            border-top-right-radius: 20%;
+            left: 50%;
+            transform: rotateY(360deg);
+        }
+        #backward{
+            border-top-right-radius: 20%;
+            transform: rotateY(-180deg);
+        }
+
+    .tex{
+        position: absolute;
+        top: 50%; left: 15%;
+        width: 70%;
+        height: 40%;
+        color: #ffd000;
+        box-sizing: border-box;
+    }
+    .tex p{
+        font-size: 90%;
+        color: white;
+        text-align: justify;
+        line-height: 1.2;
+    }
+    .texNav{
+        position: absolute;
+        top: 65%; left: 5%;
+        width: 30%;
+        height: 5%;
+    }
+
+    .n0{
+        position: absolute;
+        top: 72%;
+        right: 5%;
+        width: 50%;
+        height: 7%;
+        font-size: 140%;
+        font-weight: bold;
+        color: var(--fb);
+        text-align: right;
+    }
+    .box{
+        position: absolute;
+        top: 80%;
+        width: 30%;
+        height: 12%;
+    }
+    .box a{
+        color: inherit;
+    }
+    .box p{
+        position: absolute;
+        top: 100%;
+        font-weight: bold;
+        color: var(--link_nav);
+    }
+    .box p:hover{
+        transform: translateY(-3rem);
+        transition: 0.5s;
+            color: var(--ig);
+            background-color: #000000a1;
+    }
+    .n1{
+        left: 2%;
+        background-image: url('/pic/Views/ourLady.jpg');
+        background-size: cover;
+        background-position-x: 50%;
+        background-repeat: no-repeat;
+    }
+    .n2{
+        left: 35%;
+        background-image: url('/pic/directed.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .n3{
+        left: 68%;
+        background-image: url('/pic/cross-ador.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+/**************************/
+/*end of activity concerns*/
+
+
+.footer{
+    height: var(--footerHeight);
+    background: #303030;
+    position: relative;
+    top: 0;
+}
+/***************************/
+/*footer concerns*/
+    .footBox{
+        position: absolute;
+        top: 0;
+        width: 100%; height: 100%;
+        background-color: transparent;
+    }
+    .shoepad{
+        height: 5%;
+    }
+    .footCol1{
+        position: relative;
+        width: 100%; 
+        height: 25%;
+    }
+        #footImg{
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            left: 15%;
+        }
+            #footImg img{
+                width: 100%;
+                height: 100%;
+            }
+        #nameBox{
+            position: absolute;
+            width: 45%;
+            min-width: 55%;
+            height: 100%;
+            left: 40%;
+            box-sizing: border-box;
+            padding: 0.4rem;
+            padding-top: 1rem;
+        }
+            #nameBox p{
+                color: white;
+                font-family: Nunito;
+            }
+            #nameBox p span:nth-of-type(3){
+                font-size: 1.21rem;
+                letter-spacing: -1px;
+                word-spacing: 0.5rem;
+                color: var(--ig);
+            }
+            #nameBox p span:nth-of-type(4){
+                color: #dbcdcd;
+                font-size: 0.9rem;
+                margin-left: 0.1rem;
+                letter-spacing: 1.2rem;
+                font-weight: bold;
+            }
+            #nameBox p span:nth-of-type(1){
+                font-weight: normal;
+                color: slategray;
+                word-spacing: 5px;
+                font-size: 0.95rem;
+            }
+            #nameBox p span:nth-of-type(2){
+                font-weight: normal;
+                color: slategray;
+                margin-left: 35%;
+                font-size: 0.8rem;
+                letter-spacing: 3px;
+            }
+    #footBar{
+        width: 90%;
+        height: 0.5%;
+        margin: auto;
+        margin-top: 3%;
+        background-color: whitesmoke;
+    }
+    #addressBox{
+        width: 80%;
+        height: 20%;
+        margin: 1rem;
+        margin-left: 3.5rem;
+        font-size: 0.75rem;
+        box-sizing: border-box;
+        word-spacing: 3px;
+        letter-spacing: 0px;
+    }
+        #addressBox p{
+            font-family: Nunito;
+            color: #dbcdcd;
+        }
+        #addressBox a{
+            color: var(--ig);
+        }
+    
+    #mediaLinks{
+        position: relative;
+        width: 100%;
+        height: 10%;
+        top: -1rem;
+    }
+        .fbFrame, .igFrame{
+            position: absolute;
+            top: 10%;
+            width: 10%;
+            height: 80%;
+            left: 40%;
+        }
+        .igFrame{
+            left: 55%;
+        }
+        .mmsImg{
+            width: 100%; height: 100%;
+        }
+    
+    #siteCredits{
+        width: 100%;
+        height: 25%;
+        font-family: Nunito;
+    }
+        #siteCredits a{
+            color: var(--ig);
+        }
+        #siteCredits p{
+            color: slategray;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+        #siteCredits p:nth-of-type(2){
+            word-spacing: 3px;
+            padding-top: 0.1rem;
+        }
+        #siteCredits p:nth-of-type(3) span{
+            color: red;
+        }
+/************************/
+/*end of footer concerns*/
+
+/*************************************************/        
+/*************************************************/
+
+/*the mobile version menu concerns*/
+
+#hamburger{
+    position: absolute;
+    top: 22%;
+    left: 3%;
+    height: 65%;
+    width: 7%;
+}
+.srg{
+    width: 100%;
+    height: 13%;
+    background-color: var(--banner_accent);
+    margin: 15.75% 0;
+    transition: 0.4s;
+}
+.flip .ia{
+    transform: translate(0,0.69rem) rotate(-45deg);
+}
+.flip .ib{
+    opacity: 0;
+}
+.flip .ic{
+    transform: translate(0, -0.69rem) rotate(45deg);
+}
+
+/*sidebar concerns*/
+/******************/
+.sidebar{
+    position: fixed;
+    top: 0; left: 0;
+    width: 60vw;
+    height: 55rem;
+    background-color: var(--link_nav);
+    transition: 0.7s;
+    transform: translateX(-100%);
+    overflow-y: scroll;
+    z-index: 2;
+    font-family: Nunito, garamond;
+}
+.sb_active{
+    transform: translateX(0%);
+}
+.sbSpacer{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 7.3rem;
+    background: var(--menu_accent);
+    color: whitesmoke;
+    font-style: italic;
+}
+.sbSpacer p{
+    position: absolute;
+    top: 60%; left: 10%;
+    font-size: 98%;
+}
+
+.cardMenuAll{
+    position: fixed;
+    top: 7.3rem;
+    box-sizing: border-box;
+    height: 47rem;
+    width: 100%;
+    background-color: var(--link_nav);
+}
+    .cardMenuAll a:hover{
+        color: var(--ig);
+    }
+
+.sidebar, .sbSpacer, .cardMenuAll{
+    outline: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+/*1 of 5 main menuCaption s*/
+.cardmenuItem{
+    display: inline-block;
+    width: 80%;
+    background: var(--link_nav);
+    font-size: 100%;
+    padding: 6.4%;
+    color: whitesmoke;
+}
+
+.cardbutton{
+    position: absolute;
+    height: 2.8rem;
+    width: 15%;
+    /*recall: absolute and measured to the sidebar itself"*/
+    color: var(--ig);
+    font-size: 0.9rem;
+    left: 85%;
+    background-color: var(--link_nav);
+}
+
+/*extended menuTitle*/
+.cardmenuOptions{
+    position: relative;
+    display: none; /*this is set to block when sidebar is opened using JS*/
+    transition: 0.5s;
+    z-index: -5;
+    background-color: var(--menu_accent);
+    width: 100%;
+    height: auto; /*this is determined by content. No content, zero height. Ensure there is something within the p tags in the html before you conclude the code is broken*/
+}
+    /*these classes are the slide motion of the menu and submenu when opened*/
+    .inview{
+        animation-name: slide;
+        animation-timing-function: linear;
+        animation-duration: 0.3s;
+        animation-delay: 0.01s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+    }
+    @keyframes slide {
+        0%{
+            transform: translateY(-40%);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+    .outview{
+        animation-name: slope;
+        animation-timing-function: linear;
+        animation-duration: 0.3s;
+        animation-delay: 0.01s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+    }
+    @keyframes slope {
+        0%{
+            transform: translateY(40%);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+.hasMoreOpt{
+    padding: 4%;
+    padding-left: 7%;
+    border-bottom: 1px solid var(--ig);
+    color: whitesmoke;
+    background-color: transparent;
+}
+
+/*subMenuTitle*/
+.cardmenuOptionsMore{
+    position: relative;
+    width: auto; 
+    height:auto;
+    left: 0;
+    transition: 0.4s;
+    border: none;
+    display: none;
+    /*will become block-display when made active with JS*/
+}
+
+.cardmenuOptions a:last-child, .cardmenuOptionsMore p:last-child{
+    border: 0px;
+}
+/*A mere styling preference*/
+
+/******************************************************/
+/*sublinks is a paragraph class of cardMenuOptionsMore
+it almost always contains only a-tags and can link to places within the same page*/
+.sublinks{
+    position: relative; /*for indentation*/
+    top: 0;
+    width: 85%;
+    width: 100%;
+    left: 12%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--ig);
+    padding: 0.6rem 0rem 0.6rem 1rem;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+}
+.sublinks a{
+    color: var(--link_navHighlight);
+}
+
+/******************************************************/
+/*mainlinks is a paragraph class of cardMenuOptions
+it contains only a-tags and links out to a different page*/
+
+.mainlinks{
+    position: relative;
+    color: white;
+    padding: 0.6rem 0rem 0.6rem 1rem;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 1px solid whitesmoke;
+}
+.mainlinks a{
+    color: white;
+}
+.mainlinks:hover{
+    color: var(--ig);
+}
+.cardmenuOptions .mainlinks:last-of-type{
+    border-bottom: 0.3rem solid transparent;
+}
+
+/*the 'visib' class forms part of the code that fixes a bug unique to safari browser*/
+.visib{
+    transform: translateX(0.01rem);
+}
+/**end bug fix**/
+
+.cmi_active{
+    display: block;
+}
+
+.subSlidey{
+    top: 0rem;
+    opacity: 1;
+}
+.active{
+    background: var(--banner);
+    color: var(--ig);
+}
+.grayOut{
+    color: gray;
+}
+
+/*there is an inexplicable clicking of the first link of every collapsible menu that occurs automatically when the caption beside (on the L.H.S) the plus sign is clicked. The menuCaptionflap was made to address this*/
+
+.menuCaptionFlap{
+    position: absolute;
+    width: 85%;
+    height: 3.3rem; /*ensure a slight overlap*/
+    background-color: transparent;
+    box-sizing: border-box;
+    z-index: 9;   
+}
+/*Note to self: remember that the order of placement of the flap before the maincaption 
+in the html, and the seemingly un-intuitive increased z-index in the stylesheet
+is to take the nextSibling property of the object used in the js into account.
+This flap was created after the fact. I can't be bothered to edit too many chunks of related code;
+*/
+
+/*************end of sidebar concerns***********/
+/***********************************************/
+
+
+        /*lower resolution mobiles*/
+        @media only screen and (max-width: 339.98px) and (max-height: 480px){
+            #headTitle p{
+                font-size: 150%;
+                letter-spacing: -1px;
+                word-spacing: -1px;
+            }
+            .sm{
+                background-size: contain;
+            }
+        }    
+}
+
+@media only screen and (max-width: 599.98px){
+    .all{
+        display: none;
+    }
+}
